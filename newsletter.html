@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Submit a Resource — Design Index | Graphic Design Tools &amp; References</title>
+  <title>Newsletter — Design Index | The Creative Mix</title>
 
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
@@ -22,8 +22,8 @@
     gtag('js', new Date());
     gtag('config', 'G-1XKSSBD8CM');
   </script>
-  <meta name="description" content="Found a graphic design resource that belongs here? Submit a type foundry, design tool, inspiration source, or reference to the Design Index.">
-  <link rel="canonical" href="https://designindex.app/submit.html">
+  <meta name="description" content="The Creative Mix — a free weekly newsletter by Design Index. New resources, design finds, and curated tools for designers who never stop growing.">
+  <link rel="canonical" href="https://designindex.app/newsletter.html">
 
   <!-- Tally popup -->
   <script async src="https://tally.so/widgets/embed.js"></script>
@@ -39,6 +39,7 @@
     :root {
       --bg:               #0b0c0e;
       --surface:          #141618;
+      --card:             #1e2023;
       --border:           rgba(255,255,255,0.07);
       --border-hover:     rgba(255,255,255,0.22);
       --text:             #ffffff;
@@ -54,6 +55,7 @@
     html.light {
       --bg:               #f5f3ef;
       --surface:          #ffffff;
+      --card:             #f0ede8;
       --border:           rgba(0,0,0,0.07);
       --border-hover:     rgba(0,0,0,0.22);
       --text:             #111113;
@@ -108,6 +110,13 @@
     .nav-links a:hover { color: var(--text); }
     .nav-links a.active { color: var(--text); font-weight: 600; }
     @media (max-width: 640px) { .nav-logo-sub { display: none; } }
+    @media (max-width: 540px) {
+      nav { flex-wrap: wrap; height: auto; padding: 10px 16px 8px; gap: 4px; }
+      .nav-left { flex: 1; }
+      .nav-links { width: 100%; gap: 16px; padding-bottom: 4px; order: 3; }
+      .nav-links a { font-size: 0.78rem; }
+      .nav-mode-btn { font-size: 0.73rem; padding: 4px 10px; margin-left: auto; }
+    }
     .nav-mode-btn {
       font-size: 0.78rem; padding: 5px 13px; border-radius: 9999px;
       background: var(--mode-btn-bg); border: 1px solid var(--mode-btn-border);
@@ -116,75 +125,129 @@
     }
     .nav-mode-btn:hover { background: var(--mode-btn-bg); transform: translateY(-1px); border-color: var(--border-hover); }
 
-    /* ── SUBMIT ─────────────────────────────────────────────────────────────── */
-    .submit-wrap {
+    /* ── PAGE ───────────────────────────────────────────────────────────────── */
+    .page { max-width: 1300px; margin: 0 auto; padding: 20px 16px 48px; }
+
+    /* ── NEWSLETTER PAGE ────────────────────────────────────────────────────── */
+    .nl-wrap {
       max-width: 680px;
       margin: 60px auto 80px;
-      padding: 0 16px;
+      padding: 0 28px;
     }
-    .submit-eyebrow {
+    @media (max-width: 720px) {
+      .nl-wrap { margin: 40px auto 60px; }
+    }
+    .nl-eyebrow {
       font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
       color: var(--text-muted); margin-bottom: 16px;
       display: flex; align-items: center; gap: 6px;
     }
-    .submit-eyebrow::before { content: '—'; opacity: 0.5; }
-    .submit-heading {
+    .nl-eyebrow::before { content: '—'; opacity: 0.5; }
+    .nl-heading {
       font-size: clamp(2rem, 6vw, 3.5rem);
       line-height: 0.95;
       letter-spacing: -0.04em;
       text-transform: uppercase;
       color: var(--text);
       font-weight: 900;
-      margin-bottom: 16px;
+      margin-bottom: 32px;
     }
-    .submit-heading .serif {
+    .nl-heading .serif {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-weight: 300;
       font-size: 1.13em;
       letter-spacing: -0.05em;
     }
-    .submit-sub {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      letter-spacing: -0.01em;
-      margin-bottom: 36px;
+    .nl-body {
       border-top: 1px solid var(--border);
-      padding-top: 24px;
+      padding-top: 32px;
     }
-    .submit-cta-btn {
-      display: inline-flex;
+    .nl-body p {
+      font-size: 0.95rem;
+      color: var(--text-dim);
+      line-height: 1.7;
+      letter-spacing: -0.01em;
+      margin-bottom: 20px;
+    }
+    .nl-body p:last-child { margin-bottom: 0; }
+    .nl-body em { color: var(--text); font-style: italic; }
+    .nl-body strong { color: var(--text); font-weight: 700; }
+
+    /* ── SUBSCRIBE FORM ─────────────────────────────────────────────────────── */
+    .nl-form-wrap {
+      margin-top: 36px;
+      padding: 28px 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+    .nl-form {
+      display: flex;
+      gap: 8px;
       align-items: center;
-      justify-content: center;
-      width: 100%;
-      padding: 18px 24px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .nl-fields {
+      display: flex;
+      gap: 8px;
+      flex: 1;
+      min-width: 0;
+    }
+    @media (max-width: 480px) {
+      .nl-fields { flex-direction: column; }
+      .nl-form-wrap { padding: 20px 18px; }
+    }
+    .nl-input {
+      flex: 1;
+      min-width: 0;
+      padding: 11px 16px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 0.88rem;
+      font-family: inherit;
+      letter-spacing: -0.01em;
+      outline: none;
+      transition: border-color 0.18s;
+    }
+    .nl-input:focus { border-color: var(--border-hover); }
+    .nl-input::placeholder { color: var(--text-faint); }
+    .nl-btn {
+      padding: 11px 22px;
       background: var(--text);
       color: var(--bg);
       border: none;
-      border-radius: 12px;
-      font-size: 1rem;
+      border-radius: 8px;
+      font-size: 0.88rem;
       font-family: inherit;
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: -0.01em;
-      text-decoration: none;
       cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
       transition: opacity 0.18s, transform 0.18s;
-      margin-bottom: 8px;
     }
-    .submit-cta-btn:hover { opacity: 0.85; transform: translateY(-2px); }
-    .submit-back {
+    .nl-btn:hover { opacity: 0.8; transform: translateY(-1px); }
+    .nl-btn:disabled { opacity: 0.5; cursor: default; transform: none; }
+    .nl-note { font-size: 0.72rem; color: var(--text-faint); letter-spacing: -0.01em; }
+    .nl-success { font-size: 0.85rem; color: var(--text-dim); letter-spacing: -0.01em; display: none; }
+
+    .nl-back {
       display: inline-flex; align-items: center; gap: 6px;
       margin-top: 40px;
       font-size: 0.8rem; font-weight: 600; letter-spacing: -0.01em;
       color: var(--text-muted); text-decoration: none;
       transition: color 0.18s;
     }
-    .submit-back:hover { color: var(--text); }
+    .nl-back:hover { color: var(--text); }
 
     /* ── FOOTER ───────────────────────────────────────────────────────────── */
     footer {
       border-top: 1px solid var(--footer-border);
       padding: 40px 16px 32px;
+      transition: border-color 0.22s;
     }
     .footer-inner {
       max-width: 1300px;
@@ -212,6 +275,9 @@
       color: var(--text-faint);
       letter-spacing: 0.02em;
     }
+    @media (max-width: 480px) {
+      .footer-links { text-align: left; }
+    }
   </style>
 </head>
 <body>
@@ -226,8 +292,8 @@
     </a>
     <div class="nav-links">
       <a href="/about.html">About</a>
-      <a href="#tally-open=vG0xKl&tally-emoji-text=👋&tally-emoji-animation=wave" class="active">Submit</a>
-      <a href="/#newsletter">Newsletter</a>
+      <a href="#tally-open=vG0xKl&tally-emoji-text=👋&tally-emoji-animation=wave">Submit</a>
+      <a href="/newsletter.html" class="active">Newsletter</a>
       <button class="nav-mode-btn" id="mode-btn" aria-label="Toggle color mode">
         <svg id="mode-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
           <circle cx="12" cy="12" r="5"/>
@@ -238,28 +304,47 @@
     </div>
   </nav>
 
-  <div class="submit-wrap">
-    <div class="submit-eyebrow">Submit a Resource</div>
-    <div class="submit-heading">
-      <span class="bold">Know Something</span><br>
-      <span class="serif">Worth Sharing?</span>
+  <div class="nl-wrap">
+    <div class="nl-eyebrow">Newsletter</div>
+    <div class="nl-heading">
+      <span class="serif">Built for Designers</span><br>
+      <span class="bold">Who Never Stop Growing.</span>
     </div>
-    <p class="submit-sub">
-      If you've found a tool, resource, or reference that belongs here, submit it below.
-      Everything is reviewed before it's added — quality over quantity.
-    </p>
+    <div class="nl-body">
+      <p>
+        The same curiosity and obsession that built this index goes into the newsletter every week.
+      </p>
+      <p>
+        <em>The Creative Mix</em> goes out every Tuesday. Design resources I'm actually using. The tools, sites, fonts, and references I keep coming back to.
+      </p>
+      <p>
+        Plus a short leadership section for the designer who wants to grow beyond just the work.
+      </p>
+      <p><strong>Always something worth opening.</strong></p>
+      <p>
+        Over 2,000 designers are already on it. I won't waste your time. Just the good stuff, once a week. It's free.
+      </p>
 
-    <a class="submit-cta-btn" href="#tally-open=vG0xKl&tally-emoji-text=👋&tally-emoji-animation=wave">
-      Open Submission Form
-    </a>
+      <div class="nl-form-wrap">
+        <form class="nl-form" id="nl-form" novalidate>
+          <div class="nl-fields">
+            <input class="nl-input" id="nl-fname" type="text" placeholder="First name" autocomplete="given-name">
+            <input class="nl-input" id="nl-email" type="email" placeholder="Your email" required autocomplete="email">
+          </div>
+          <button class="nl-btn" type="submit">I'm In</button>
+        </form>
+        <p class="nl-note" id="nl-note">Join 2,000+ designers getting the weekly mix. Free. No spam. Unsubscribe anytime.</p>
+        <p class="nl-success" id="nl-success">You're in — check your inbox to confirm.</p>
+      </div>
 
-    <a class="submit-back" href="/">
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="10" y1="6" x2="2" y2="6"/>
-        <polyline points="5,3 2,6 5,9"/>
-      </svg>
-      Back to the index
-    </a>
+      <a class="nl-back" href="/">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="10" y1="6" x2="2" y2="6"/>
+          <polyline points="5,3 2,6 5,9"/>
+        </svg>
+        Back to the index
+      </a>
+    </div>
   </div>
 
   <footer>
@@ -269,17 +354,17 @@
           <img class="footer-logo-icon" src="1f5c2.svg" alt="🗂️">
           Design Index
         </div>
-        <div class="footer-tagline">A hand-picked index of the best resources for graphic designers. Updated regularly.</div>
+        <div class="footer-tagline">The resources worth keeping. Nothing else.</div>
       </div>
       <div class="footer-links">
-        <a href="#tally-open=vG0xKl&tally-emoji-text=👋&tally-emoji-animation=wave">Submit a Resource</a>
-        <a href="/about.html">About</a>
-        <a href="/#newsletter">Newsletter</a>
-        <a href="/">designindex.app</a>
+        <a href="https://www.instagram.com/matthewcrtv/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.pinterest.com/matthewcrtv/" target="_blank" rel="noopener">Pinterest</a>
+        <a href="https://www.behance.net/matthewpahl" target="_blank" rel="noopener">Behance</a>
+        <a href="https://www.linkedin.com/in/matthewpahl/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Design Index. Curated with care.</span>
+      <span>© 2026 Design Index. Built and curated by @matthewcrtv</span>
       <span>designindex.app</span>
     </div>
   </footer>
@@ -310,6 +395,29 @@
 
     twemoji.parse(document.querySelector('nav'), { folder: 'svg', ext: '.svg' });
     twemoji.parse(document.querySelector('footer'), { folder: 'svg', ext: '.svg' });
+
+    document.getElementById('nl-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('nl-email').value.trim();
+      const firstName = document.getElementById('nl-fname').value.trim();
+      if (!email) return;
+      const btn = e.target.querySelector('button');
+      btn.textContent = 'Joining…';
+      btn.disabled = true;
+      try {
+        await fetch('https://subscribe-forms.beehiiv.com/501ae541-8532-43d5-bc7b-9743fd67047d', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: `email=${encodeURIComponent(email)}&first_name=${encodeURIComponent(firstName)}`
+        });
+      } catch {}
+      document.getElementById('nl-form').style.display = 'none';
+      document.getElementById('nl-note').style.display = 'none';
+      document.getElementById('nl-success').style.display = 'block';
+    });
   </script>
+  <script type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
+
 </body>
 </html>

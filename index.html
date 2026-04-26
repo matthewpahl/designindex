@@ -256,8 +256,17 @@
       display: flex;
       gap: 8px;
       align-items: center;
+      flex-wrap: wrap;
+      max-width: 560px;
+    }
+    .nl-fields {
+      display: flex;
+      gap: 8px;
       flex: 1;
-      max-width: 460px;
+      min-width: 0;
+    }
+    @media (max-width: 480px) {
+      .nl-fields { flex-direction: column; }
     }
     .nl-input {
       flex: 1;
@@ -478,39 +487,6 @@
     .footer-links { display: flex; flex-direction: column; gap: 10px; text-align: right; }
     .footer-links a { font-size: 0.76rem; color: var(--text-dim); text-decoration: none; }
     .footer-links a:hover { color: var(--text); }
-    .footer-curator {
-      max-width: 1300px;
-      margin: 36px auto 0;
-      padding-top: 32px;
-      border-top: 1px solid var(--footer-border);
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 24px 40px;
-      align-items: start;
-    }
-    .curator-label {
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      padding-top: 3px;
-    }
-    .curator-text {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.05rem;
-      line-height: 1.6;
-      color: var(--text-dim);
-      margin: 0;
-      max-width: 620px;
-    }
-    .curator-text em {
-      font-style: normal;
-      color: var(--text);
-    }
-    @media (max-width: 600px) {
-      .footer-curator { grid-template-columns: 1fr; gap: 10px; }
-    }
     .footer-bottom {
       max-width: 1300px;
       margin: 28px auto 0;
@@ -543,10 +519,16 @@
     @media (max-width: 480px) {
       .feat-grid { grid-template-columns: 1fr; }
       .cat-grid  { grid-template-columns: 1fr; }
-      .nav-links a { display: none; }
       .hero { padding: 18px 18px 22px; }
-      .hero-heading { letter-spacing: -0.02em; }
+      .hero-heading { font-size: clamp(3rem, 13vw, 6.5rem); letter-spacing: -0.02em; }
       .footer-links { text-align: left; }
+    }
+    @media (max-width: 540px) {
+      nav { flex-wrap: wrap; height: auto; padding: 10px 16px 8px; gap: 4px; --nav-height: 82px; }
+      .nav-left { flex: 1; }
+      .nav-links { width: 100%; gap: 16px; padding-bottom: 4px; order: 3; }
+      .nav-links a { font-size: 0.78rem; }
+      .nav-mode-btn { font-size: 0.73rem; padding: 4px 10px; margin-left: auto; }
     }
   </style>
 </head>
@@ -563,7 +545,7 @@
     <div class="nav-links">
       <a href="/about.html">About</a>
       <a href="#tally-open=vG0xKl&tally-emoji-text=👋&tally-emoji-animation=wave">Submit</a>
-      <a href="#newsletter">Newsletter</a>
+      <a href="/newsletter.html">Newsletter</a>
       <button class="nav-mode-btn" id="mode-btn" aria-label="Toggle color mode">
         <svg id="mode-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
           <circle cx="12" cy="12" r="5"/>
@@ -597,10 +579,13 @@
     <div class="card-container newsletter-section" id="newsletter">
       <div class="section-label"><span class="section-dash">—</span>Newsletter</div>
       <form class="nl-form" id="nl-form" novalidate>
-        <input class="nl-input" id="nl-email" type="email" placeholder="your@email.com" required autocomplete="email">
-        <button class="nl-btn" type="submit">Subscribe</button>
+        <div class="nl-fields">
+          <input class="nl-input" id="nl-fname" type="text" placeholder="First name" autocomplete="given-name">
+          <input class="nl-input" id="nl-email" type="email" placeholder="Your email" required autocomplete="email">
+        </div>
+        <button class="nl-btn" type="submit">I'm In</button>
       </form>
-      <p class="nl-note">Curated design resources, straight to your inbox. No spam. Unsubscribe anytime.</p>
+      <p class="nl-note">Join 2,000+ designers getting the weekly mix. Free. No spam. Unsubscribe anytime.</p>
       <p class="nl-success" id="nl-success">You're in — check your inbox to confirm.</p>
     </div>
 
@@ -620,25 +605,17 @@
           <img class="footer-logo-icon" src="1f5c2.svg" alt="🗂️">
           Design Index
         </div>
-        <div class="footer-tagline">A hand-picked index of the best resources for graphic designers. Updated regularly.</div>
+        <div class="footer-tagline">The resources worth keeping. Nothing else.</div>
       </div>
       <div class="footer-links">
-        <a href="#tally-open=vG0xKl&tally-emoji-text=👋&tally-emoji-animation=wave">Submit a Resource</a>
-        <a href="/about.html">About</a>
-        <a href="#newsletter">Newsletter</a>
-        <a href="https://designindex.app">designindex.app</a>
+        <a href="https://www.instagram.com/matthewcrtv/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.pinterest.com/matthewcrtv/" target="_blank" rel="noopener">Pinterest</a>
+        <a href="https://www.behance.net/matthewpahl" target="_blank" rel="noopener">Behance</a>
+        <a href="https://www.linkedin.com/in/matthewpahl/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
-    <div class="footer-curator">
-      <div class="curator-label">From the curator</div>
-      <p class="curator-text">
-        I'm a graphic designer who got tired of re-discovering the same resources every time a new project started.
-        This index is the list I wish someone had handed me earlier — <em>one place for the tools, references, and inspiration I actually use.</em>
-        Everything here earned its spot. Nothing is here because it was easy to find.
-      </p>
-    </div>
     <div class="footer-bottom">
-      <span>© 2026 Design Index. Curated with care.</span>
+      <span>© 2026 Design Index. Built and curated by @matthewcrtv</span>
       <span>designindex.app</span>
     </div>
   </footer>
@@ -821,7 +798,7 @@
     const now = new Date();
     const month = now.toLocaleString('en-US', { month: 'long' }).toUpperCase();
     document.getElementById('updated-tag').textContent = `Updated ${month} ${now.getFullYear()}`;
-    document.getElementById('count-tag').textContent = `${RESOURCES.length} Curated Resources`;
+    document.getElementById('count-tag').textContent = `${RESOURCES.length} Resources`;
 
     renderFeatured();
     observeCards(); // animate featured cards on load
@@ -837,16 +814,17 @@
     document.getElementById('nl-form').addEventListener('submit', async (e) => {
       e.preventDefault();
       const email = document.getElementById('nl-email').value.trim();
+      const firstName = document.getElementById('nl-fname').value.trim();
       if (!email) return;
       const btn = e.target.querySelector('button');
-      btn.textContent = 'Subscribing…';
+      btn.textContent = 'Joining…';
       btn.disabled = true;
       try {
         await fetch('https://subscribe-forms.beehiiv.com/501ae541-8532-43d5-bc7b-9743fd67047d', {
           method: 'POST',
           mode: 'no-cors',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: `email=${encodeURIComponent(email)}`
+          body: `email=${encodeURIComponent(email)}&first_name=${encodeURIComponent(firstName)}`
         });
       } catch {}
       document.getElementById('nl-form').style.display = 'none';

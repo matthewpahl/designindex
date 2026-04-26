@@ -110,6 +110,13 @@
     .nav-links a:hover { color: var(--text); }
     .nav-links a.active { color: var(--text); font-weight: 600; }
     @media (max-width: 640px) { .nav-logo-sub { display: none; } }
+    @media (max-width: 540px) {
+      nav { flex-wrap: wrap; height: auto; padding: 10px 16px 8px; gap: 4px; }
+      .nav-left { flex: 1; }
+      .nav-links { width: 100%; gap: 16px; padding-bottom: 4px; order: 3; }
+      .nav-links a { font-size: 0.78rem; }
+      .nav-mode-btn { font-size: 0.73rem; padding: 4px 10px; margin-left: auto; }
+    }
     .nav-mode-btn {
       font-size: 0.78rem; padding: 5px 13px; border-radius: 9999px;
       background: var(--mode-btn-bg); border: 1px solid var(--mode-btn-border);
@@ -164,9 +171,21 @@
     }
     .about-body p:last-child { margin-bottom: 0; }
     .about-body em { color: var(--text); font-style: italic; }
+    .about-social {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; margin-bottom: 32px;
+    }
+    .social-link {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 0.78rem; font-weight: 500; letter-spacing: -0.01em;
+      color: var(--text-muted); text-decoration: none;
+      padding: 6px 14px; border-radius: 9999px;
+      border: 1px solid var(--border); background: transparent;
+      transition: color 0.18s, border-color 0.18s;
+    }
+    .social-link:hover { color: var(--text); border-color: var(--border-hover); }
     .about-back {
       display: inline-flex; align-items: center; gap: 6px;
-      margin-top: 40px;
+      margin-top: 8px;
       font-size: 0.8rem; font-weight: 600; letter-spacing: -0.01em;
       color: var(--text-muted); text-decoration: none;
       transition: color 0.18s;
@@ -220,7 +239,7 @@
     <div class="nav-links">
       <a href="/about.html" class="active">About</a>
       <a href="#tally-open=vG0xKl&tally-emoji-text=👋&tally-emoji-animation=wave">Submit</a>
-      <a href="/#newsletter">Newsletter</a>
+      <a href="/newsletter.html">Newsletter</a>
       <button class="nav-mode-btn" id="mode-btn" aria-label="Toggle color mode">
         <svg id="mode-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
           <circle cx="12" cy="12" r="5"/>
@@ -234,30 +253,49 @@
   <div class="about-wrap">
     <div class="about-eyebrow">About</div>
     <div class="about-heading">
-      <span class="bold">Built For</span><br>
-      <span class="serif">Growing Designers.</span>
+      <span class="serif">The index I built for myself.</span><br>
+      <span class="bold">Now it's yours.</span>
     </div>
     <div class="about-body">
-      <!-- ABOUT COPY: Replace the paragraphs below with your own content -->
       <p>
-        I'm a graphic designer who got tired of re-discovering the same resources every time a new project started.
-        Bookmark folders. Browser tabs. Half-remembered URLs typed into search bars.
-        <em>There had to be a better way to keep track of the good stuff.</em>
+        I've been collecting design resources for years. Not casually. Going down a rabbit hole of type foundries at 12am on a random Tuesday. Studying the greats, dissecting not just what I like, but why. Analyzing. Trying to elevate my taste and ultimately my work every single day. That obsession never really turned off.
       </p>
       <p>
-        Design Index is the list I wish someone had handed me when I was starting out — one place for the tools,
-        references, type foundries, inspiration archives, and reads that actually move the needle.
-        Everything here earned its spot. Nothing is here because it was easy to find.
+        Design Index is what came out of it. The Google Sheets weren't enough. I've built plenty of makeshift resource lists to share with designers, but never a tightly curated index until now.
       </p>
       <p>
-        The goal is simple: sharpen your eye, elevate your work, and save you the hours of hunting
-        that go into building taste. It's updated regularly as I find things worth adding.
+        This is what I wish someone had handed me when I first started in graphic design. Ten years later, this is the index I still use every day. I made it for myself, but I wanted to share it with you. Every link earns its spot. If it hasn't made me better, I'm not putting it in front of you.
       </p>
       <p>
-        If you've found something that belongs here, <a href="#tally-open=vG0xKl&tally-emoji-text=👋&tally-emoji-animation=wave" style="color:var(--text);text-decoration:underline;text-underline-offset:3px;">submit it</a>.
-        If you want new additions in your inbox, <a href="/#newsletter" style="color:var(--text);text-decoration:underline;text-underline-offset:3px;">subscribe to the newsletter</a>.
+        This is an ongoing project. I will add, delete, and modify the index every month. I'm endlessly curious. I know I can learn from anyone. I'm obsessed with finding the best stuff out there. And my promise to myself and to you is I won't lose that hunger.
       </p>
-      <!-- END ABOUT COPY -->
+      <p>
+        I'm also just one person. I know I don't see it all. And I know you have incredible resources on hand that aren't in here yet. If you're up for it, I'd love for this to be a collaborative project. Something living, active, and built by the graphic design community.
+      </p>
+      <p>
+        If you have a resource that deserves a spot, please <a href="#tally-open=vG0xKl&tally-emoji-text=👋&tally-emoji-animation=wave" style="color:var(--text);text-decoration:underline;text-underline-offset:3px;">submit it here</a>.
+      </p>
+      <p>
+        If you want to follow along as this grows, I send out a free weekly email called <em>The Creative Mix</em>. New resources, design finds, and whatever I'm currently obsessing over. It's for the designer who stays curious, keeps growing, and wants to be the most equipped person in the room. <a href="/newsletter.html" style="color:var(--text);text-decoration:underline;text-underline-offset:3px;">Subscribe here</a>.
+      </p>
+      <div class="about-social">
+        <a href="https://www.instagram.com/matthewcrtv/" target="_blank" rel="noopener" class="social-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          Instagram
+        </a>
+        <a href="https://www.pinterest.com/matthewcrtv/" target="_blank" rel="noopener" class="social-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.853 0 1.267.64 1.267 1.408 0 .858-.546 2.14-.828 3.33-.236.995.499 1.806 1.476 1.806 1.772 0 3.137-1.868 3.137-4.565 0-2.387-1.716-4.057-4.164-4.057-2.836 0-4.5 2.127-4.5 4.326 0 .856.33 1.775.741 2.277a.3.3 0 0 1 .069.284c-.076.312-.244.995-.277 1.134-.044.183-.145.222-.334.134C7.1 17.48 6 15.82 6 13.72c0-3.15 2.292-6.045 6.608-6.045 3.47 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.015 0-1.97-.527-2.296-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.445 2.962.445 5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+          Pinterest
+        </a>
+        <a href="https://www.behance.net/matthewpahl" target="_blank" rel="noopener" class="social-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029H23.726zm-7.726-3h3.427c-.123-1.979-1.141-2.589-1.685-2.589-.653 0-1.548.381-1.742 2.589zM14 8H5v2h9V8zM5 18.5h4.5c.828 0 3.5-.373 3.5-3S10.164 12 9.19 12H5v6.5zm2-5h2c1.084 0 1.5.625 1.5 1.5S10.084 16.5 9 16.5H7v-3z"/></svg>
+          Behance
+        </a>
+        <a href="https://www.linkedin.com/in/matthewpahl/" target="_blank" rel="noopener" class="social-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
       <a class="about-back" href="/">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <line x1="10" y1="6" x2="2" y2="6"/>
@@ -275,17 +313,17 @@
           <img class="footer-logo-icon" src="1f5c2.svg" alt="🗂️">
           Design Index
         </div>
-        <div class="footer-tagline">A hand-picked index of the best resources for graphic designers. Updated regularly.</div>
+        <div class="footer-tagline">The resources worth keeping. Nothing else.</div>
       </div>
       <div class="footer-links">
-        <a href="#tally-open=vG0xKl&tally-emoji-text=👋&tally-emoji-animation=wave">Submit a Resource</a>
-        <a href="/about.html">About</a>
-        <a href="/#newsletter">Newsletter</a>
-        <a href="/">designindex.app</a>
+        <a href="https://www.instagram.com/matthewcrtv/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.pinterest.com/matthewcrtv/" target="_blank" rel="noopener">Pinterest</a>
+        <a href="https://www.behance.net/matthewpahl" target="_blank" rel="noopener">Behance</a>
+        <a href="https://www.linkedin.com/in/matthewpahl/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Design Index. Curated with care.</span>
+      <span>© 2026 Design Index. Built and curated by @matthewcrtv</span>
       <span>designindex.app</span>
     </div>
   </footer>
