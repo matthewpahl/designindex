@@ -14,7 +14,7 @@ module.exports = async function handler(req, res) {
   console.log('pub_id present:', !!pubId, '| api_key present:', !!apiKey);
 
   const payload = { email, reactivate_existing: false };
-  if (first_name) payload.first_name = first_name;
+  if (first_name) payload.custom_fields = [{ name: 'first_name', value: first_name }];
 
   const response = await fetch(
     `https://api.beehiiv.com/v2/publications/${pubId}/subscriptions`,
