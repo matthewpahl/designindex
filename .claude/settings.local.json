@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm -v)",
+      "Bash(npx puppeteer *)",
+      "Bash(node -e \"require\\('puppeteer'\\)\")",
+      "Read(//usr/local/bin/**)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --screenshot=\"screenshot.png\" --window-size=900,2400 \"file://$\\(pwd\\)/index.html\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --screenshot=\"screenshot.png\" --window-size=900,2600 \"file://$\\(pwd\\)/index.html\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --screenshot=\"screenshot.png\" --window-size=920,2800 \"file://$\\(pwd\\)/index.html\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --screenshot=\"screenshot-mobile.png\" --window-size=390,900 \"file://$\\(pwd\\)/index.html\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --screenshot=\"screenshot.png\" --window-size=920,3200 \"file://$\\(pwd\\)/index.html\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --screenshot=\"screenshot-bottom.png\" --window-size=920,5000 \"file://$\\(pwd\\)/index.html\")"
+    ]
+  }
+}
