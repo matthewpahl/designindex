@@ -47,9 +47,40 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://designindex.app/#website",
     "name": "Design Index",
     "url": "https://designindex.app",
-    "description": "A hand-picked directory of the best graphic design resources — type foundries, design inspiration, stock imagery, color tools, books, assets, and more."
+    "description": "A hand-curated directory of the internet's best graphic design resources — type foundries, inspiration, stock, color tools, books, assets, and more.",
+    "inLanguage": "en-US",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://designindex.app/#{search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://designindex.app/#organization",
+    "name": "Design Index",
+    "url": "https://designindex.app",
+    "logo": "https://designindex.app/og-image.jpg",
+    "description": "A hand-curated directory of the internet's best graphic design resources, maintained by Matthew Pahl.",
+    "founder": {
+      "@type": "Person",
+      "name": "Matthew Pahl",
+      "sameAs": [
+        "https://www.instagram.com/matthewcrtv/",
+        "https://www.behance.net/matthewpahl",
+        "https://www.linkedin.com/in/matthewpahl/"
+      ]
+    },
+    "sameAs": ["https://www.instagram.com/matthewcrtv/"]
   }
   </script>
 

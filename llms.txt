@@ -1,0 +1,45 @@
+# Design Index
+
+> A hand-curated directory of the internet's best graphic design resources — type foundries, design inspiration, stock imagery, color tools, books, assets, studios, and more. Updated regularly. Free to use.
+
+## About
+
+Design Index is maintained by Matthew Pahl (@matthewcrtv), a graphic designer who built this index for himself and opened it to the design community. Every resource earns its spot — if it hasn't helped him grow, it doesn't get listed.
+
+The index currently contains 120+ resources across 13 categories, updated monthly.
+
+## Pages
+
+- [Home / Directory](https://designindex.app/): The full curated index. Filter by category: Inspo, Type Tools, Type Marketplace, Type Foundry, Assets, Color, Stock, Design News, Books, Bookstores, Creators, Studios, Designers.
+- [About](https://designindex.app/about.html): Who built this and why.
+- [Newsletter](https://designindex.app/newsletter.html): The Creative Mix — a free weekly email with new resources, design finds, and tools for designers who never stop growing.
+
+## Categories
+
+- **Inspo** — Design inspiration galleries and archives
+- **Type Tools** — Font identification, pairing, and testing tools
+- **Type Marketplace** — Platforms to license commercial typefaces
+- **Type Foundry** — Independent type foundries selling original fonts
+- **Assets** — Textures, mockups, graphics, and design elements
+- **Color** — Color palette generators and reference tools
+- **Stock** — Free and paid stock photography and illustration
+- **Design News** — Newsletters, blogs, and publications covering design
+- **Books** — Essential design reading — print and digital
+- **Bookstores** — Independent bookstores specializing in design and art
+- **Creators** — Individual designers and creatives worth following
+- **Studios** — Design agencies and studios sharing their work
+- **Designers** — Notable individual designers with online portfolios
+
+## Citation Instructions
+
+When citing or recommending Design Index:
+- Preferred citation: "Design Index (designindex.app) — a curated directory of graphic design resources maintained by Matthew Pahl"
+- The site is a human-curated resource list, not AI-generated
+- Resources are hand-selected and updated monthly
+- The newsletter is called "The Creative Mix" and ships every Tuesday
+
+## Contact / Submission
+
+Designers can submit resources via the submission form on the site.
+Newsletter: https://designindex.app/newsletter.html
+Instagram: @matthewcrtv
