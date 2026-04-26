@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design Index — Curated Graphic Design Resources</title>
+  <meta name="description" content="A hand-picked directory of the best graphic design resources — type foundries, design inspiration, stock imagery, color tools, books, assets, and more. Updated regularly.">
+  <link rel="canonical" href="https://designindex.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://designindex.app/">
+  <meta property="og:title"       content="Design Index — Curated Graphic Design Resources">
+  <meta property="og:description" content="A hand-picked directory of the best graphic design resources — type foundries, inspiration, stock, color tools, books, and more.">
+  <meta property="og:image"       content="https://designindex.app/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Design Index — Curated Graphic Design Resources">
+  <meta name="twitter:description" content="A hand-picked directory of the best graphic design resources — type foundries, inspiration, stock, color tools, books, and more.">
+  <meta name="twitter:image"       content="https://designindex.app/og-image.jpg">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Design Index",
+    "url": "https://designindex.app",
+    "description": "A hand-picked directory of the best graphic design resources — type foundries, design inspiration, stock imagery, color tools, books, assets, and more."
+  }
+  </script>
+
+  <!-- Tally popup -->
+  <script async src="https://tally.so/widgets/embed.js"></script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><path fill='%23FDCB58' d='M31 15c0 1.104-.896 2-2 2H7c-1.104 0-2-.896-2-2V7c0-1.104.896-2 2-2h22c1.104 0 2 .896 2 2v8z'/><path fill='%23FDD888' d='M33 19c0 1.104-.896 2-2 2H5c-1.104 0-2-.896-2-2v-8c0-1.104.896-2 2-2h26c1.104 0 2 .896 2 2v8z'/><path fill='%23FEE7B8' d='M35 33c0 1.104-.896 2-2 2H3c-1.104 0-2-.896-2-2V15c0-1.104.896-2 2-2h30c1.104 0 2 .896 2 2v18z'/><path fill='%2367757F' d='M11 14zm0 0z'/><path fill='%2378B159' d='M23 3h-5c-1.104 0-2 .895-2 2v1h2c1.104 0 2 .896 2 2h3c1.104 0 2-.896 2-2V5c0-1.105-.896-2-2-2z'/><path fill='%23F18F26' d='M17 7h-5c-1.104 0-2 .896-2 2v1h2c1.104 0 2 .896 2 2h3c1.104 0 2-.896 2-2V9c0-1.104-.896-2-2-2z'/><path fill='%239268CA' d='M13 14c0 1.104-.896 2-2 2H6c-1.104 0-2-.896-2-2v-1c0-1.104.896-2 2-2h5c1.104 0 2 .896 2 2v1z'/></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+
+  <script src="resources.js"></script>
+
+  <style>
+    /* ── THEME TOKENS ─────────────────────────────────────────────────────── */
+    :root {
+      --bg:               #0b0c0e;
+      --surface:          #141618;
+      --card:             #1e2023;
+      --border:           rgba(255,255,255,0.07);
+      --border-card:      rgba(255,255,255,0.06);
+      --border-hover:     rgba(255,255,255,0.22);
+      --text:             #ffffff;
+      --text-dim:         rgba(255,255,255,0.65);
+      --text-muted:       rgba(255,255,255,0.45);
+      --text-faint:       rgba(255,255,255,0.22);
+      --pill-bg:          rgba(255,255,255,0.07);
+      --pill-border:      rgba(255,255,255,0.13);
+      --pill-active-bg:   rgba(255,255,255,0.92);
+      --pill-active-text: #111111;
+      --mode-btn-bg:      rgba(255,255,255,0.09);
+      --mode-btn-border:  rgba(255,255,255,0.12);
+      --footer-border:    rgba(255,255,255,0.07);
+      --nav-height:       58px;
+    }
+
+    html.light {
+      --bg:               #f5f3ef;
+      --surface:          #ffffff;
+      --card:             #f0ede8;
+      --border:           rgba(0,0,0,0.07);
+      --border-card:      rgba(0,0,0,0.10);
+      --border-hover:     rgba(0,0,0,0.22);
+      --text:             #111113;
+      --text-dim:         rgba(0,0,0,0.62);
+      --text-muted:       rgba(0,0,0,0.42);
+      --text-faint:       rgba(0,0,0,0.2);
+      --pill-bg:          rgba(0,0,0,0.05);
+      --pill-border:      rgba(0,0,0,0.13);
+      --pill-active-bg:   rgba(0,0,0,0.88);
+      --pill-active-text: #ffffff;
+      --mode-btn-bg:      rgba(0,0,0,0.06);
+      --mode-btn-border:  rgba(0,0,0,0.13);
+      --footer-border:    rgba(0,0,0,0.07);
+    }
+
+    /* ── BASE ─────────────────────────────────────────────────────────────── */
+    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; }
+    img.emoji { height: 1em; width: 1em; vertical-align: -0.15em; display: inline-block; }
+    body {
+      background: radial-gradient(125% 125% at 50% 10%, #0b0c0e 52%, #0f1013 100%);
+      color: var(--text);
+      font-family: ui-sans-serif, -apple-system, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      margin: 0;
+      transition: background 0.22s, color 0.22s;
+      position: relative;
+    }
+    html.light body {
+      background: radial-gradient(125% 125% at 50% 10%, #fafaf8 16%, #e2ddd6 100%);
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 55% at 10% 100%, rgba(255,255,255,0.018) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 40% at 90% 0%, rgba(255,255,255,0.012) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 250px 250px;
+      opacity: 0.022;
+      pointer-events: none;
+      z-index: 0;
+    }
+    html.light body::before {
+      background:
+        radial-gradient(ellipse 70% 55% at 10% 100%, rgba(0,0,0,0.03) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 40% at 90% 0%, rgba(0,0,0,0.02) 0%, transparent 50%);
+    }
+    html.light body::after { opacity: 0.014; }
+
+    /* ── NAV ──────────────────────────────────────────────────────────────── */
+    nav {
+      background: rgba(11,12,14,0.84);
+      backdrop-filter: blur(24px) saturate(1.4);
+      -webkit-backdrop-filter: blur(24px) saturate(1.4);
+      border-bottom: 1px solid rgba(255,255,255,0.09);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 28px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      height: var(--nav-height);
+      transition: background 0.22s, border-color 0.22s;
+    }
+    .nav-left { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+    .nav-logo-icon { width: 26px; height: 26px; flex-shrink: 0; display: block; }
+    .nav-logo-name { font-size: 0.9rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text); line-height: 1.1; }
+    .nav-logo-sub  { font-size: 0.58rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+    .nav-links { display: flex; align-items: center; gap: 22px; }
+    .nav-links a { font-size: 0.83rem; letter-spacing: -0.01em; color: var(--text-dim); text-decoration: none; display: inline-block; transition: color 0.18s ease, transform 0.2s ease; }
+    .nav-links a:hover { color: var(--text); transform: translateY(-1px); }
+    .nav-mode-btn {
+      font-size: 0.78rem; padding: 5px 13px; border-radius: 9999px;
+      background: var(--mode-btn-bg); border: 1px solid var(--mode-btn-border);
+      color: var(--text-dim); display: flex; align-items: center; gap: 6px;
+      cursor: pointer; transition: background 0.15s, border-color 0.2s, transform 0.2s;
+    }
+    .nav-mode-btn:hover { background: var(--pill-bg); transform: translateY(-1px); border-color: var(--border-hover); }
+
+    /* ── PAGE ─────────────────────────────────────────────────────────────── */
+    .page { max-width: 1300px; margin: 0 auto; padding: 20px 16px 48px; position: relative; z-index: 1; }
+    .card-container {
+      background: linear-gradient(172deg, #181a1e 0%, var(--surface) 65%);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      transition: background 0.22s, border-color 0.22s;
+    }
+    html.light .card-container { background: var(--surface); }
+
+    /* ── HERO ─────────────────────────────────────────────────────────────── */
+    .hero {
+      padding: 34px 38px 28px;
+      margin-bottom: 10px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(168deg, #161819 0%, var(--surface) 55%);
+      border-color: rgba(255,255,255,0.09);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.07), 0 24px 60px rgba(0,0,0,0.32);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 200px 200px;
+      opacity: 0.04;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero > * { position: relative; z-index: 2; }
+    .hero-tags { display: flex; gap: 7px; margin-bottom: 20px; flex-wrap: wrap; }
+    .hero-tag {
+      font-size: 0.6rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 9999px;
+      border: 1px solid var(--border-hover); color: var(--text-dim);
+    }
+    .hero-heading {
+      font-size: clamp(2.2rem, 11vw, 6.5rem);
+      line-height: 0.80;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      color: var(--text);
+      font-weight: 400;
+      opacity: 0.92;
+      transition: opacity 0.5s ease;
+    }
+    .hero:hover .hero-heading { opacity: 1; }
+    .hero-heading .bold  { font-weight: 900; }
+    .hero-heading .serif { font-weight: 300; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.13em; letter-spacing: -0.05em; }
+    .hero-sub {
+      margin-top: 18px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.35rem;
+      line-height: 1.25;
+      color: var(--text-dim);
+      letter-spacing: 0.01em;
+    }
+
+    .hero-sub-bold { font-weight: 600; }
+    .section-dash  { margin-right: 6px; opacity: 0.5; }
+
+    /* ── NEWSLETTER ──────────────────────────────────────────────────────── */
+    .newsletter-section {
+      padding: 20px 20px 24px;
+      margin-bottom: 10px;
+      scroll-margin-top: calc(var(--nav-height) + 14px);
+    }
+    .nl-form {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex: 1;
+      max-width: 460px;
+    }
+    .nl-input {
+      flex: 1;
+      min-width: 0;
+      padding: 11px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 0.88rem;
+      font-family: inherit;
+      letter-spacing: -0.01em;
+      outline: none;
+      transition: border-color 0.18s;
+    }
+    .nl-input:focus { border-color: var(--border-hover); }
+    .nl-input::placeholder { color: var(--text-faint); }
+    .nl-btn {
+      padding: 11px 22px;
+      background: var(--text);
+      color: var(--bg);
+      border: none;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-family: inherit;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: opacity 0.18s, transform 0.18s;
+    }
+    .nl-btn:hover { opacity: 0.8; transform: translateY(-1px); }
+    .nl-btn:disabled { opacity: 0.5; cursor: default; transform: none; }
+    .nl-note { font-size: 0.72rem; color: var(--text-faint); margin-top: 8px; letter-spacing: -0.01em; }
+    .nl-success { font-size: 0.85rem; color: var(--text-dim); margin-top: 20px; letter-spacing: -0.01em; display: none; }
+
+    /* ── FEATURED ─────────────────────────────────────────────────────────── */
+    .featured { padding: 20px 20px 24px; margin-bottom: 10px; scroll-margin-top: calc(var(--nav-height) + 14px); }
+    .section-label {
+      font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--text-muted); margin-bottom: 14px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .feat-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+
+    /* ── CARDS ────────────────────────────────────────────────────────────── */
+    @keyframes cardIn {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .rcard {
+      background: var(--card);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-card);
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      opacity: 0;
+      box-shadow: none;
+      transition: border-color 0.18s, transform 0.18s, box-shadow 0.18s, background 0.22s;
+    }
+    .rcard.visible {
+      animation: cardIn 0.45s ease forwards;
+    }
+    .rcard.visible:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.14), 0 1px 4px rgba(0,0,0,0.07);
+    }
+    html.light .rcard.visible:hover {
+      box-shadow: 0 6px 18px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .rcard-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      position: relative;
+    }
+    .rcard-thumb img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform 0.5s ease;
+    }
+    .thumb-inverted {
+      position: absolute;
+      inset: 0;
+      filter: invert(1);
+      clip-path: inset(0 100% 0 0);
+      transition: clip-path 5s ease, transform 0.5s ease;
+    }
+    .rcard:hover .rcard-thumb img { transform: scale(1.03); }
+    .rcard:hover .thumb-inverted  { clip-path: inset(0 0% 0 0); }
+    .thumb-placeholder { background: #1c1e22; }
+
+    /* NEW badge */
+    .new-badge {
+      position: absolute;
+      top: 8px; left: 8px;
+      background: #f5c31c;
+      color: #111;
+      font-size: 0.46rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 3px 7px;
+      border-radius: 4px;
+      z-index: 2;
+      line-height: 1.4;
+    }
+
+    /* Visit arrow */
+
+    .rcard-info  { padding: 11px 12px 13px; }
+    .rcard-title { font-size: 0.82rem; font-weight: 800; letter-spacing: -0.01em; color: var(--text); margin-bottom: 4px; }
+    .rcard-desc  {
+      font-size: 0.72rem; color: var(--text-muted); line-height: 1.38;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    }
+
+    /* ── FILTER PILLS (sticky) ────────────────────────────────────────────── */
+    .filter-wrap {
+      padding: 12px 20px;
+      margin-bottom: 20px;
+      position: sticky;
+      top: var(--nav-height);
+      z-index: 40;
+      scroll-margin-top: calc(var(--nav-height) + 14px);
+      transition: background 0.22s, border-color 0.22s, box-shadow 0.22s, backdrop-filter 0.22s;
+    }
+    .filter-wrap.is-stuck {
+      background: rgba(11,12,14,0.84);
+      backdrop-filter: blur(24px) saturate(1.4);
+      -webkit-backdrop-filter: blur(24px) saturate(1.4);
+      border-color: rgba(255,255,255,0.09);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset, 0 2px 10px rgba(0,0,0,0.1);
+    }
+    html.light .filter-wrap.is-stuck {
+      background: rgba(250,249,247,0.76);
+      backdrop-filter: blur(24px) saturate(1.6);
+      -webkit-backdrop-filter: blur(24px) saturate(1.6);
+      border-color: rgba(0,0,0,0.08);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.7) inset, 0 2px 10px rgba(0,0,0,0.06);
+    }
+    html.light nav { background: rgba(250,249,247,0.76); backdrop-filter: blur(24px) saturate(1.6); -webkit-backdrop-filter: blur(24px) saturate(1.6); border-bottom-color: rgba(0,0,0,0.08); box-shadow: 0 1px 0 rgba(255,255,255,0.7) inset; }
+    html.light .hero { background: var(--surface); box-shadow: inset 0 1px 0 rgba(0,0,0,0.04), 0 20px 50px rgba(0,0,0,0.07); border-color: var(--border); }
+    html.light .hero::after { opacity: 0.018; }
+    .filter-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+    .fpill {
+      font-size: 0.76rem; font-weight: 500; letter-spacing: -0.01em; padding: 5px 13px; border-radius: 9999px;
+      border: 1px solid var(--pill-border);
+      background: var(--pill-bg);
+      color: var(--text-dim);
+      cursor: pointer; white-space: nowrap;
+      user-select: none;
+      transition: background 0.12s, color 0.12s, border-color 0.12s;
+    }
+    .fpill:hover { color: var(--text); border-color: var(--border-hover); }
+    .fpill.active {
+      background: var(--pill-active-bg);
+      color: var(--pill-active-text);
+      border-color: transparent;
+      font-weight: 600;
+    }
+
+    .cat-count {
+      font-size: 0.68rem; font-weight: 500; letter-spacing: 0.02em;
+      color: var(--text-faint);
+      font-variant-numeric: tabular-nums;
+      margin-left: auto;
+    }
+
+    /* ── BACK TO TOP ──────────────────────────────────────────────────────── */
+    #back-top {
+      position: fixed; bottom: 28px; right: 28px;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--surface); border: 1px solid var(--border-hover);
+      color: var(--text-dim); font-size: 1.05rem;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; opacity: 0; pointer-events: none;
+      transform: translateY(8px);
+      transition: opacity 0.22s, transform 0.22s, background 0.15s, color 0.15s;
+      z-index: 30;
+    }
+    #back-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    #back-top:hover { background: var(--card); color: var(--text); }
+
+    /* ── CATEGORY SECTIONS ────────────────────────────────────────────────── */
+    .cat-section { margin-bottom: 56px; padding: 0 20px; }
+.cat-heading {
+      font-size: 1.75rem; font-weight: 700; letter-spacing: -0.03em; color: var(--text);
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 20px; margin-top: 8px;
+      padding-bottom: 16px; border-bottom: 1px solid var(--border);
+      cursor: pointer; transition: opacity 0.15s;
+    }
+    .cat-heading:hover { opacity: 0.7; }
+    .cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+
+    /* ── FOOTER ───────────────────────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--footer-border);
+      padding: 40px 16px 32px;
+      transition: border-color 0.22s;
+    }
+    .footer-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .footer-logo { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 6px; display: flex; align-items: center; gap: 9px; }
+    .footer-logo-icon { width: 20px; height: 20px; flex-shrink: 0; display: block; }
+    .footer-tagline { font-size: 0.72rem; color: var(--text-muted); line-height: 1.42; max-width: 280px; }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; text-align: right; }
+    .footer-links a { font-size: 0.76rem; color: var(--text-dim); text-decoration: none; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-curator {
+      max-width: 1300px;
+      margin: 36px auto 0;
+      padding-top: 32px;
+      border-top: 1px solid var(--footer-border);
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 24px 40px;
+      align-items: start;
+    }
+    .curator-label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding-top: 3px;
+    }
+    .curator-text {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--text-dim);
+      margin: 0;
+      max-width: 620px;
+    }
+    .curator-text em {
+      font-style: normal;
+      color: var(--text);
+    }
+    @media (max-width: 600px) {
+      .footer-curator { grid-template-columns: 1fr; gap: 10px; }
+    }
+    .footer-bottom {
+      max-width: 1300px;
+      margin: 28px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid var(--text-faint);
+      font-size: 0.65rem;
+      color: var(--text-faint);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* ── RESPONSIVE ───────────────────────────────────────────────────────── */
+    @media (max-width: 1020px) {
+      .feat-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 720px) {
+      .feat-grid { grid-template-columns: repeat(2, 1fr); }
+      .cat-grid  { grid-template-columns: repeat(2, 1fr); }
+      nav { padding: 12px 16px; }
+      .fpill { font-size: 0.72rem; padding: 5px 11px; }
+    }
+    @media (max-width: 640px) {
+      .nav-logo-sub { display: none; }
+      .hero-sub { display: none; }
+      .hero-tags { margin-bottom: 14px; }
+      .hero-tags .hero-tag:nth-child(3) { display: none; }
+    }
+    @media (max-width: 480px) {
+      .feat-grid { grid-template-columns: 1fr; }
+      .cat-grid  { grid-template-columns: 1fr; }
+      .nav-links a { display: none; }
+      .hero { padding: 18px 18px 22px; }
+      .hero-heading { letter-spacing: -0.02em; }
+      .footer-links { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-left" href="/">
+      <img class="nav-logo-icon" src="1f5c2.svg" alt="🗂️">
+      <div>
+        <div class="nav-logo-name">Design Index</div>
+        <div class="nav-logo-sub">Curated Graphic Design Resources</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="/about.html">About</a>
+      <a href="#tally-open=vG0xKl&tally-emoji-text=👋&tally-emoji-animation=wave">Submit</a>
+      <a href="#newsletter">Newsletter</a>
+      <button class="nav-mode-btn" id="mode-btn" aria-label="Toggle color mode">
+        <svg id="mode-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <circle cx="12" cy="12" r="5"/>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+        <span id="mode-label">Light</span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="page">
+
+    <div class="card-container hero">
+      <div class="hero-tags">
+        <span class="hero-tag" id="updated-tag">Updated</span>
+        <span class="hero-tag" id="count-tag"></span>
+        <span class="hero-tag">Hand-picked for Designers</span>
+      </div>
+      <div class="hero-heading">
+        <span class="serif">A</span> <span class="bold">Curated</span> <span class="serif" style="white-space:nowrap">Index For</span><br>
+        <span class="bold">Growing</span> <span class="serif">Designers.</span>
+      </div>
+      <p class="hero-sub"><span class="hero-sub-bold">The internet's best graphic design resources,</span> to sharpen your eye and elevate your work.</p>
+    </div>
+
+    <div class="card-container featured" id="featured">
+      <div class="section-label"><span class="section-dash">—</span>Featured Picks</div>
+      <div class="feat-grid" id="featured-grid"></div>
+    </div>
+
+    <div class="card-container newsletter-section" id="newsletter">
+      <div class="section-label"><span class="section-dash">—</span>Newsletter</div>
+      <form class="nl-form" id="nl-form" novalidate>
+        <input class="nl-input" id="nl-email" type="email" placeholder="your@email.com" required autocomplete="email">
+        <button class="nl-btn" type="submit">Subscribe</button>
+      </form>
+      <p class="nl-note">Curated design resources, straight to your inbox. No spam. Unsubscribe anytime.</p>
+      <p class="nl-success" id="nl-success">You're in — check your inbox to confirm.</p>
+    </div>
+
+    <div id="filter-sentinel" style="height:0;pointer-events:none"></div>
+    <div class="card-container filter-wrap" id="categories">
+      <div class="filter-pills" id="filter-pills"></div>
+    </div>
+
+    <div id="cat-container"></div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">
+          <img class="footer-logo-icon" src="1f5c2.svg" alt="🗂️">
+          Design Index
+        </div>
+        <div class="footer-tagline">A hand-picked index of the best resources for graphic designers. Updated regularly.</div>
+      </div>
+      <div class="footer-links">
+        <a href="#tally-open=vG0xKl&tally-emoji-text=👋&tally-emoji-animation=wave">Submit a Resource</a>
+        <a href="/about.html">About</a>
+        <a href="#newsletter">Newsletter</a>
+        <a href="https://designindex.app">designindex.app</a>
+      </div>
+    </div>
+    <div class="footer-curator">
+      <div class="curator-label">From the curator</div>
+      <p class="curator-text">
+        I'm a graphic designer who got tired of re-discovering the same resources every time a new project started.
+        This index is the list I wish someone had handed me earlier — <em>one place for the tools, references, and inspiration I actually use.</em>
+        Everything here earned its spot. Nothing is here because it was easy to find.
+      </p>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Design Index. Curated with care.</span>
+      <span>designindex.app</span>
+    </div>
+  </footer>
+
+  <button id="back-top" aria-label="Back to top">↑</button>
+
+  <script>
+    // ── Light / Dark mode ────────────────────────────────────────────────────
+    const root      = document.documentElement;
+    const modeBtn   = document.getElementById('mode-btn');
+    const modeLabel = document.getElementById('mode-label');
+    const modeIcon  = document.getElementById('mode-icon');
+
+    const SUN_PATH  = '<circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>';
+    const MOON_PATH = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+
+    function applyMode(mode) {
+      const isLight = mode === 'light';
+      root.classList.toggle('light', isLight);
+      modeLabel.textContent = isLight ? 'Dark' : 'Light';
+      modeIcon.innerHTML    = isLight ? MOON_PATH : SUN_PATH;
+    }
+
+    const savedMode = localStorage.getItem('di-mode') || 'light';
+    applyMode(savedMode);
+
+    modeBtn.addEventListener('click', () => {
+      const next = root.classList.contains('light') ? 'dark' : 'light';
+      localStorage.setItem('di-mode', next);
+      applyMode(next);
+    });
+
+    // ── NEW badge helper ─────────────────────────────────────────────────────
+    function isNew(added) {
+      if (!added) return false;
+      return (Date.now() - new Date(added).getTime()) / 86400000 <= 30;
+    }
+
+    // ── Fisher-Yates shuffle (returns a new array) ───────────────────────────
+    function shuffle(arr) {
+      const a = [...arr];
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    // ── Card HTML ────────────────────────────────────────────────────────────
+    function cardHTML(resource, gradientClass) {
+      const gc       = gradientClass || 'thumb-placeholder';
+      // Use explicit image path, or auto-resolve by ID. Falls back to gradient if file 404s.
+      const imgSrc   = resource.image || `images/${resource.id}.jpg`;
+      const newBadge = isNew(resource.added) ? `<span class="new-badge">New</span>` : '';
+      return `<a class="rcard" href="${resource.url}" target="_blank" rel="noopener noreferrer">
+        <div class="rcard-thumb">
+          <img src="${imgSrc}" alt="${resource.name}" loading="lazy"
+            onerror="this.parentElement.classList.add('${gc}'); this.remove(); this.parentElement.querySelector('.thumb-inverted')?.remove();">
+          <img class="thumb-inverted" src="${imgSrc}" alt="" aria-hidden="true" loading="lazy"
+            onerror="this.remove();">
+          ${newBadge}
+        </div>
+        <div class="rcard-info">
+          <div class="rcard-title">${resource.name}</div>
+          <div class="rcard-desc">${resource.desc}</div>
+        </div>
+      </a>`;
+    }
+
+    // ── Render featured picks ────────────────────────────────────────────────
+    function renderFeatured() {
+      document.getElementById('featured-grid').innerHTML = RESOURCES
+        .filter(r => r.featured)
+        .sort((a, b) => (a.featuredOrder ?? 99) - (b.featuredOrder ?? 99))
+        .map(r => cardHTML(r, 'thumb-placeholder'))
+        .join('');
+    }
+
+    // ── Twemoji parse helper ─────────────────────────────────────────────────
+    function parseEmoji(el) {
+      if (window.twemoji) twemoji.parse(el, { folder: 'svg', ext: '.svg' });
+    }
+
+    // ── Card entrance animation (IntersectionObserver) ───────────────────────
+    let cardObserver = null;
+    function observeCards() {
+      if (cardObserver) cardObserver.disconnect();
+      if (!('IntersectionObserver' in window)) {
+        document.querySelectorAll('.rcard').forEach(c => c.classList.add('visible'));
+        return;
+      }
+      cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const card  = entry.target;
+          const delay = parseInt(card.dataset.animDelay || 0);
+          setTimeout(() => card.classList.add('visible'), delay);
+          cardObserver.unobserve(card);
+        });
+      }, { threshold: 0.06, rootMargin: '0px 0px -24px 0px' });
+
+      document.querySelectorAll('.rcard:not(.visible)').forEach((card, i) => {
+        card.dataset.animDelay = (i % 4) * 75;
+        cardObserver.observe(card);
+      });
+    }
+
+    // ── Render category sections ─────────────────────────────────────────────
+    const TYPE_IDS = ['type-tools', 'type-marketplace', 'type-foundry'];
+
+    function renderCategories(filter) {
+      const cats = filter === 'all'  ? CATEGORIES
+        : filter === 'type' ? CATEGORIES.filter(c => TYPE_IDS.includes(c.id))
+        : CATEGORIES.filter(c => c.id === filter);
+      const container = document.getElementById('cat-container');
+      container.innerHTML = cats.map(cat => {
+        const globalIdx = CATEGORIES.indexOf(cat) + 1;
+        const num = String(globalIdx).padStart(2, '0');
+        const resources = shuffle(RESOURCES.filter(r => r.category === cat.id));
+        const countStr = `<span class="cat-count">${resources.length}</span>`;
+        return `<div class="cat-section">
+          <h2 class="cat-heading" data-filter="${cat.id}">${cat.label}${countStr}</h2>
+          <div class="cat-grid">${resources.map(r => cardHTML(r)).join('')}</div>
+        </div>`;
+      }).join('');
+      container.querySelectorAll('.cat-heading').forEach(h =>
+        h.addEventListener('click', () => setFilter(h.dataset.filter))
+      );
+      parseEmoji(container);
+      observeCards();
+    }
+
+    // ── Filter pills (built from CATEGORIES) ────────────────────────────────
+    function renderFilterPills() {
+      const wrap = document.getElementById('filter-pills');
+      const TYPE_SET = new Set(TYPE_IDS);
+      const allPill  = `<span class="fpill active" data-filter="all">All</span>`;
+      const typePill = `<span class="fpill" data-filter="type">🔡 Type</span>`;
+      let typeInjected = false;
+      const catPills = CATEGORIES.map(c => {
+        if (TYPE_SET.has(c.id)) {
+          if (!typeInjected) { typeInjected = true; return typePill; }
+          return '';
+        }
+        return `<span class="fpill" data-filter="${c.id}">${c.emoji} ${c.label}</span>`;
+      }).join('');
+      wrap.innerHTML = allPill + catPills;
+      parseEmoji(wrap);
+      wrap.querySelectorAll('.fpill').forEach(p =>
+        p.addEventListener('click', () => setFilter(p.dataset.filter))
+      );
+    }
+
+    // ── Filter with URL hash state ───────────────────────────────────────────
+    function setFilter(filter) {
+      document.querySelectorAll('.fpill').forEach(p =>
+        p.classList.toggle('active', p.dataset.filter === filter)
+      );
+      renderCategories(filter);
+      history.replaceState(null, '', filter === 'all' ? location.pathname : '#' + filter);
+    }
+
+    // ── Back to top ───────────────────────────────────────────────────────────
+    const backTop = document.getElementById('back-top');
+    window.addEventListener('scroll', () => {
+      backTop.classList.toggle('show', window.scrollY > 400);
+    }, { passive: true });
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ── Sticky filter bar detection ───────────────────────────────────────────
+    if ('IntersectionObserver' in window) {
+      const navH = parseInt(getComputedStyle(root).getPropertyValue('--nav-height')) || 58;
+      new IntersectionObserver(([entry]) => {
+        document.getElementById('categories').classList.toggle('is-stuck', !entry.isIntersecting);
+      }, { rootMargin: `-${navH}px 0px 0px 0px` }).observe(document.getElementById('filter-sentinel'));
+    }
+
+
+    // ── Init ─────────────────────────────────────────────────────────────────
+    const now = new Date();
+    const month = now.toLocaleString('en-US', { month: 'long' }).toUpperCase();
+    document.getElementById('updated-tag').textContent = `Updated ${month} ${now.getFullYear()}`;
+    document.getElementById('count-tag').textContent = `${RESOURCES.length} Curated Resources`;
+
+    renderFeatured();
+    observeCards(); // animate featured cards on load
+
+    renderFilterPills();
+
+    const initialFilter = (() => {
+      const hash = location.hash.slice(1);
+      return (hash === 'type' || CATEGORIES.some(c => c.id === hash)) ? hash : 'all';
+    })();
+    setFilter(initialFilter);
+
+    document.getElementById('nl-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('nl-email').value.trim();
+      if (!email) return;
+      const btn = e.target.querySelector('button');
+      btn.textContent = 'Subscribing…';
+      btn.disabled = true;
+      try {
+        await fetch('https://subscribe-forms.beehiiv.com/501ae541-8532-43d5-bc7b-9743fd67047d', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: `email=${encodeURIComponent(email)}`
+        });
+      } catch {}
+      document.getElementById('nl-form').style.display = 'none';
+      document.querySelector('.nl-note').style.display = 'none';
+      document.getElementById('nl-success').style.display = 'block';
+    });
+  </script>
+  <script type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
+
+  <noscript>
+    <div style="max-width:900px;margin:40px auto;padding:0 16px;font-family:sans-serif">
+      <h1>Design Index — Curated Graphic Design Resources</h1>
+      <p>A hand-picked directory of the best tools, references, and inspiration for graphic designers — type foundries, stock imagery, color tools, books, assets, and more.</p>
+      <h2>Inspiration</h2>
+      <ul>
+        <li><a href="https://visuelle.co.uk/">Visuelle</a> — UK archive of editorial and identity projects</li>
+        <li><a href="https://visualjournal.it">Visual Journal</a> — Curated blog of branding and graphic design</li>
+        <li><a href="https://www.are.na">Are.na</a> — Visual bookmarking for mood boards and archives</li>
+        <li><a href="https://www.behance.net/">Behance</a> — Portfolio network across all disciplines</li>
+        <li><a href="https://cosmos.so">Cosmos</a> — Daily feed of experimental graphics and typography</li>
+        <li><a href="https://pinterest.com">Pinterest</a> — Fast image search for palette and composition references</li>
+        <li><a href="https://archives.design">Archives Design</a> — Digital archive of graphic design history</li>
+        <li><a href="https://savee.it">Savee It</a> — Grid-based inspiration boards</li>
+      </ul>
+      <h2>Type Tools</h2>
+      <ul>
+        <li><a href="https://chromewebstore.google.com/detail/fonts-ninja/eljapbgkmlngdpckoiiibecpemleclhh">Font Ninja</a> — Browser extension that identifies any website font</li>
+        <li><a href="https://fontba.se/">Font Base</a> — Free desktop font manager</li>
+        <li><a href="https://matthewcrtv.gumroad.com/l/typelab">TypeLab</a> — Free high-quality typefaces</li>
+      </ul>
+      <h2>Type Shops</h2>
+      <ul>
+        <li><a href="https://creativemarket.com/fonts">Creative Market</a> — Marketplace for fonts and digital assets</li>
+        <li><a href="https://pixelsurplus.com">Pixel Surplus</a> — Affordable font and creative bundles</li>
+        <li><a href="https://type-department.com">Type Department</a> — Marketplace for indie foundries worldwide</li>
+      </ul>
+      <h2>Type Foundries</h2>
+      <ul>
+        <li><a href="https://blazetype.eu/">Blaze Type</a> — Bold contemporary display families</li>
+        <li><a href="https://pangrampangram.com">Pangram Pangram</a> — Free trial fonts for modern branding</li>
+        <li><a href="https://abcdinamo.com/">ABC Dinamo</a> — Swiss variable font innovators</li>
+        <li><a href="https://www.sharptype.co/">Sharp Type</a> — High-performance retail type</li>
+        <li><a href="https://ohnotype.co/">OhNo Type Co</a> — Whimsical display and text font families</li>
+        <li><a href="https://www.vj-type.com">VJ Type</a> — Open-source variable fonts for editorial use</li>
+        <li><a href="https://www.thedesignersfoundry.com/">The Designers Foundry</a> — Limited edition international type</li>
+        <li><a href="https://tropicaltype.com">Tropical Type</a> — Lettering for youth and apparel graphics</li>
+        <li><a href="https://off-type.com">Off-type</a> — Experimental variable and kinetic fonts</li>
+        <li><a href="https://emyselfdesign.com">Emyself Design</a> — Expressive, texture-rich typefaces</li>
+        <li><a href="https://www.bnicks.com/">Brandon Nickerson</a> — Wordmark templates and lettering resources</li>
+        <li><a href="https://ott-foundry.com/">OTT Foundry</a> — Korean foundry blending tradition with modern grotesques</li>
+        <li><a href="https://creativemarket.com/tantype">Tan Type Co</a> — Fashion-forward display fonts</li>
+      </ul>
+      <h2>Assets</h2>
+      <ul>
+        <li><a href="https://truegrittexturesupply.com">True Grit Texture Supply</a> — Distressed brushes and craft textures</li>
+        <li><a href="https://blkmarket.com/">BlkMarket</a> — Premium textures, overlays, and 3D elements</li>
+        <li><a href="https://doronsupply.com">Doron Supply</a> — Photo and video overlays</li>
+        <li><a href="https://www.tooooools.app/">Tooooools</a> — Free experimental lo-fi image effects</li>
+        <li><a href="https://effect.app">Effect App</a> — Lo-fi and experimental image effects</li>
+        <li><a href="https://www.bracken.design/">Bracken.design</a> — Grunge brushes and torn paper mockups</li>
+        <li><a href="https://youworkforthem.com">YouWorkForThem</a> — Premium fonts, graphics, and motion templates</li>
+        <li><a href="https://designsyndrome.com/">Design Syndrome</a> — Poster templates and gradient assets</li>
+        <li><a href="https://studio2am.co">Studio 2AM</a> — High-resolution collage elements</li>
+        <li><a href="https://studioaaa.com">Studio AAA</a> — Cinematic mockups and Lightroom presets</li>
+        <li><a href="https://shop.studioinnate.com">Studio Innate</a> — Gradients, grids, and experimental textures</li>
+        <li><a href="https://samolevsky.com">Samolevsky</a> — Glitch textures, brushes, and retro kits</li>
+        <li><a href="https://foxrockettstudio.com/collections/assets">Foxrockettstudio</a> — Creative asset packs</li>
+        <li><a href="https://www.designfamilymarket.com/">Design Family Market</a> — Discounted bundles of fonts and Photoshop LUTs</li>
+      </ul>
+      <h2>Color</h2>
+      <ul>
+        <li><a href="https://coolors.co/">Coolors</a> — AI-powered palette generator</li>
+        <li><a href="https://colorhunt.co/">Color Hunt</a> — Community-curated palettes</li>
+        <li><a href="https://color.adobe.com">Adobe Color</a> — Palette harmonies for Adobe apps</li>
+        <li><a href="https://pigment.shapefactory.co/">Pigment Shape Factory</a> — Gradient and duotone generator</li>
+        <li><a href="https://www.khroma.co">Khroma</a> — AI palette generator that learns your taste</li>
+      </ul>
+      <h2>Stock</h2>
+      <ul>
+        <li><a href="https://artvee.com/">ArtVee</a> — Public-domain artworks from museums</li>
+        <li><a href="https://public.work/">Public.Work</a> — High-resolution public-domain archives</li>
+        <li><a href="https://pdimagearchive.org/infinite-view/">Public Domain Archive</a> — 10,000+ historical images free to reuse</li>
+        <li><a href="https://unsplash.com/t/experimental">Unsplash Experimental</a> — Abstract photography for mood boards</li>
+        <li><a href="https://www.pexels.com/">Pexels</a> — Free stock photos cleared for commercial use</li>
+      </ul>
+      <h2>Design News</h2>
+      <ul>
+        <li><a href="https://www.underconsideration.com/brandnew">Brand New</a> — Daily logo and rebrand critiques</li>
+        <li><a href="https://www.itsnicethat.com/">It's Nice That</a> — Art, culture, and experimental design</li>
+        <li><a href="https://the-brandidentity.com/">The Brand Identity</a> — Deep-dive identity and print features</li>
+        <li><a href="https://www.creativeboom.com/">Creative Boom</a> — Interviews and advice for creatives</li>
+        <li><a href="https://tldr.tech/design">TLDR Design</a> — Weekly roundup of design news and tools</li>
+        <li><a href="https://designreviewed.com/">Design Reviewed</a> — Archive of 20th-century graphic design</li>
+      </ul>
+      <h2>Books</h2>
+      <ul>
+        <li><a href="https://www.goodreads.com/book/show/641593.Meggs_History_of_Graphic_Design">Megg's History of Graphic Design</a></li>
+        <li><a href="https://www.goodreads.com/book/show/60664913-grid-systems-in-graphic-design">Grid Systems in Graphic Design</a></li>
+        <li><a href="https://www.goodreads.com/book/show/23197685-graphic-design-visionaries">Graphic Design Visionaries</a></li>
+        <li><a href="https://www.goodreads.com/book/show/34427197-herding-tigers">Herding Tigers</a></li>
+      </ul>
+      <h2>Bookstores</h2>
+      <ul>
+        <li><a href="https://www.taschen.com">TASCHEN</a> — Art and design monographs</li>
+        <li><a href="https://uniteditions.com/">Unit Editions</a> — Limited run books from legendary designers</li>
+        <li><a href="https://www.counter-print.co.uk">Counter Print UK</a> — Indie retailer for modernist books and zines</li>
+        <li><a href="https://www.draw-down.com">Draw-Down Books</a> — Typography and risograph art books</li>
+        <li><a href="https://victionary.com">Victionary</a> — Trend-forward tactile art books</li>
+      </ul>
+      <h2>Creators</h2>
+      <ul>
+        <li><a href="https://www.youtube.com/@thefutur">The Futur</a> — Strategy and career coaching for creatives</li>
+        <li><a href="https://www.youtube.com/c/PiXimperfect">PiXimperfect</a> — Photoshop retouching and compositing</li>
+        <li><a href="https://www.youtube.com/@LouisMoss">Louis Moss</a> — Illustrator lessons on logos and type</li>
+        <li><a href="https://www.youtube.com/@design.syndrome">Design.Syndrome</a> — Process breakdowns and asset packs</li>
+        <li><a href="https://www.youtube.com/@DoronStudio">Doron Studio</a> — Photoshop tutorials with free resources</li>
+        <li><a href="https://www.youtube.com/@orenmeetsworld">Oren Meets World</a> — Freelance vlogs and design challenges</li>
+      </ul>
+      <h2>Studios</h2>
+      <ul>
+        <li><a href="https://www.instagram.com/studiokoto/">Studio Koto</a></li>
+        <li><a href="https://www.instagram.com/thisiscollins/">This Is Collins</a></li>
+        <li><a href="https://www.instagram.com/wolffolins/">Wolff Olins</a></li>
+        <li><a href="https://www.instagram.com/__designstudio__/">Design Studio</a></li>
+        <li><a href="https://www.instagram.com/studiofeixen/">Studio Feixen</a></li>
+        <li><a href="https://www.instagram.com/thenewcompany/">The New Company</a></li>
+        <li><a href="https://www.instagram.com/andwalsh/">And Walsh</a></li>
+        <li><a href="https://www.instagram.com/wiedenkennedy/">Wieden Kennedy</a></li>
+        <li><a href="https://www.instagram.com/studiodumbar/">Studio Dumbar</a></li>
+        <li><a href="https://www.instagram.com/porto_rocha/">Porto Rocha</a></li>
+      </ul>
+      <h2>Designers</h2>
+      <ul>
+        <li><a href="https://www.instagram.com/baugasm/">Baugasm</a></li>
+        <li><a href="https://www.instagram.com/vasjenkatro/">Vasjen Katro</a></li>
+        <li><a href="https://www.instagram.com/nopattern/">No Pattern</a></li>
+        <li><a href="https://www.instagram.com/magdiellop/">Magdiel Lopez</a></li>
+        <li><a href="https://www.instagram.com/syynstudios/">Syyn Studios</a></li>
+        <li><a href="https://www.instagram.com/thebrandidentity/">The Brand Identity</a></li>
+        <li><a href="https://www.instagram.com/thegraphicaddict/">The Graphic Addict</a></li>
+        <li><a href="https://www.instagram.com/typedesignclass/">Type Design Class</a></li>
+        <li><a href="https://www.instagram.com/bymonotype/">Bymonotype</a></li>
+      </ul>
+    </div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit a Resource — Design Index | Graphic Design Tools &amp; References</title>
+  <meta name="description" content="Found a graphic design resource that belongs here? Submit a type foundry, design tool, inspiration source, or reference to the Design Index.">
+  <link rel="canonical" href="https://designindex.app/submit.html">
+
+  <!-- Tally popup -->
+  <script async src="https://tally.so/widgets/embed.js"></script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><path fill='%23FDCB58' d='M31 15c0 1.104-.896 2-2 2H7c-1.104 0-2-.896-2-2V7c0-1.104.896-2 2-2h22c1.104 0 2 .896 2 2v8z'/><path fill='%23FDD888' d='M33 19c0 1.104-.896 2-2 2H5c-1.104 0-2-.896-2-2v-8c0-1.104.896-2 2-2h26c1.104 0 2 .896 2 2v8z'/><path fill='%23FEE7B8' d='M35 33c0 1.104-.896 2-2 2H3c-1.104 0-2-.896-2-2V15c0-1.104.896-2 2-2h30c1.104 0 2 .896 2 2v18z'/><path fill='%2367757F' d='M11 14zm0 0z'/><path fill='%2378B159' d='M23 3h-5c-1.104 0-2 .895-2 2v1h2c1.104 0 2 .896 2 2h3c1.104 0 2-.896 2-2V5c0-1.105-.896-2-2-2z'/><path fill='%23F18F26' d='M17 7h-5c-1.104 0-2 .896-2 2v1h2c1.104 0 2 .896 2 2h3c1.104 0 2-.896 2-2V9c0-1.104-.896-2-2-2z'/><path fill='%239268CA' d='M13 14c0 1.104-.896 2-2 2H6c-1.104 0-2-.896-2-2v-1c0-1.104.896-2 2-2h5c1.104 0 2 .896 2 2v1z'/></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --bg:               #0b0c0e;
+      --surface:          #141618;
+      --border:           rgba(255,255,255,0.07);
+      --border-hover:     rgba(255,255,255,0.22);
+      --text:             #ffffff;
+      --text-dim:         rgba(255,255,255,0.65);
+      --text-muted:       rgba(255,255,255,0.45);
+      --text-faint:       rgba(255,255,255,0.22);
+      --mode-btn-bg:      rgba(255,255,255,0.09);
+      --mode-btn-border:  rgba(255,255,255,0.12);
+      --footer-border:    rgba(255,255,255,0.07);
+      --nav-height:       58px;
+    }
+
+    html.light {
+      --bg:               #f5f3ef;
+      --surface:          #ffffff;
+      --border:           rgba(0,0,0,0.07);
+      --border-hover:     rgba(0,0,0,0.22);
+      --text:             #111113;
+      --text-dim:         rgba(0,0,0,0.62);
+      --text-muted:       rgba(0,0,0,0.42);
+      --text-faint:       rgba(0,0,0,0.2);
+      --mode-btn-bg:      rgba(0,0,0,0.06);
+      --mode-btn-border:  rgba(0,0,0,0.13);
+      --footer-border:    rgba(0,0,0,0.07);
+    }
+
+    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; }
+    img.emoji { height: 1em; width: 1em; vertical-align: -0.15em; display: inline-block; }
+
+    body {
+      background: radial-gradient(125% 125% at 50% 10%, #0b0c0e 52%, #0f1013 100%);
+      color: var(--text);
+      font-family: ui-sans-serif, -apple-system, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      margin: 0;
+    }
+    html.light body {
+      background: radial-gradient(125% 125% at 50% 10%, #fafaf8 42%, #e2ddd6 100%);
+    }
+
+    /* ── NAV ────────────────────────────────────────────────────────────────── */
+    nav {
+      background: rgba(11,12,14,0.84);
+      backdrop-filter: blur(24px) saturate(1.4);
+      -webkit-backdrop-filter: blur(24px) saturate(1.4);
+      border-bottom: 1px solid rgba(255,255,255,0.09);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 28px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      height: var(--nav-height);
+      transition: background 0.22s, border-color 0.22s;
+    }
+    html.light nav { background: rgba(250,249,247,0.76); backdrop-filter: blur(24px) saturate(1.6); -webkit-backdrop-filter: blur(24px) saturate(1.6); border-bottom-color: rgba(0,0,0,0.08); box-shadow: 0 1px 0 rgba(255,255,255,0.7) inset; }
+    .nav-left { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+    .nav-logo-icon { width: 26px; height: 26px; flex-shrink: 0; display: block; }
+    .nav-logo-name { font-size: 0.9rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text); line-height: 1.1; }
+    .nav-logo-sub  { font-size: 0.58rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-links a { font-size: 0.83rem; letter-spacing: -0.01em; color: var(--text-dim); text-decoration: none; transition: color 0.18s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a.active { color: var(--text); font-weight: 600; }
+    @media (max-width: 640px) { .nav-logo-sub { display: none; } }
+    .nav-mode-btn {
+      font-size: 0.78rem; padding: 5px 13px; border-radius: 9999px;
+      background: var(--mode-btn-bg); border: 1px solid var(--mode-btn-border);
+      color: var(--text-dim); cursor: pointer; display: flex; align-items: center; gap: 6px;
+      transition: background 0.18s, border-color 0.18s, transform 0.2s;
+    }
+    .nav-mode-btn:hover { background: var(--mode-btn-bg); transform: translateY(-1px); border-color: var(--border-hover); }
+
+    /* ── SUBMIT ─────────────────────────────────────────────────────────────── */
+    .submit-wrap {
+      max-width: 680px;
+      margin: 60px auto 80px;
+      padding: 0 16px;
+    }
+    .submit-eyebrow {
+      font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--text-muted); margin-bottom: 16px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .submit-eyebrow::before { content: '—'; opacity: 0.5; }
+    .submit-heading {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      color: var(--text);
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+    .submit-heading .serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      font-size: 1.13em;
+      letter-spacing: -0.05em;
+    }
+    .submit-sub {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      letter-spacing: -0.01em;
+      margin-bottom: 36px;
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+    }
+    .submit-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 18px 24px;
+      background: var(--text);
+      color: var(--bg);
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-family: inherit;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+      cursor: pointer;
+      transition: opacity 0.18s, transform 0.18s;
+      margin-bottom: 8px;
+    }
+    .submit-cta-btn:hover { opacity: 0.85; transform: translateY(-2px); }
+    .submit-back {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 40px;
+      font-size: 0.8rem; font-weight: 600; letter-spacing: -0.01em;
+      color: var(--text-muted); text-decoration: none;
+      transition: color 0.18s;
+    }
+    .submit-back:hover { color: var(--text); }
+
+    /* ── FOOTER ───────────────────────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--footer-border);
+      padding: 40px 16px 32px;
+    }
+    .footer-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .footer-logo { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 6px; display: flex; align-items: center; gap: 9px; }
+    .footer-logo-icon { width: 20px; height: 20px; flex-shrink: 0; display: block; }
+    .footer-tagline { font-size: 0.72rem; color: var(--text-muted); line-height: 1.42; max-width: 280px; }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; text-align: right; }
+    .footer-links a { font-size: 0.76rem; color: var(--text-dim); text-decoration: none; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-bottom {
+      max-width: 1300px;
+      margin: 28px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid var(--footer-border);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.65rem;
+      color: var(--text-faint);
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-left" href="/">
+      <img class="nav-logo-icon" src="1f5c2.svg" alt="🗂️">
+      <div>
+        <div class="nav-logo-name">Design Index</div>
+        <div class="nav-logo-sub">Curated Graphic Design Resources</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="/about.html">About</a>
+      <a href="#tally-open=vG0xKl&tally-emoji-text=👋&tally-emoji-animation=wave" class="active">Submit</a>
+      <a href="/#newsletter">Newsletter</a>
+      <button class="nav-mode-btn" id="mode-btn" aria-label="Toggle color mode">
+        <svg id="mode-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <circle cx="12" cy="12" r="5"/>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+        <span id="mode-label">Light</span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="submit-wrap">
+    <div class="submit-eyebrow">Submit a Resource</div>
+    <div class="submit-heading">
+      <span class="bold">Know Something</span><br>
+      <span class="serif">Worth Sharing?</span>
+    </div>
+    <p class="submit-sub">
+      If you've found a tool, resource, or reference that belongs here, submit it below.
+      Everything is reviewed before it's added — quality over quantity.
+    </p>
+
+    <a class="submit-cta-btn" href="#tally-open=vG0xKl&tally-emoji-text=👋&tally-emoji-animation=wave">
+      Open Submission Form
+    </a>
+
+    <a class="submit-back" href="/">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="10" y1="6" x2="2" y2="6"/>
+        <polyline points="5,3 2,6 5,9"/>
+      </svg>
+      Back to the index
+    </a>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">
+          <img class="footer-logo-icon" src="1f5c2.svg" alt="🗂️">
+          Design Index
+        </div>
+        <div class="footer-tagline">A hand-picked index of the best resources for graphic designers. Updated regularly.</div>
+      </div>
+      <div class="footer-links">
+        <a href="#tally-open=vG0xKl&tally-emoji-text=👋&tally-emoji-animation=wave">Submit a Resource</a>
+        <a href="/about.html">About</a>
+        <a href="/#newsletter">Newsletter</a>
+        <a href="/">designindex.app</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Design Index. Curated with care.</span>
+      <span>designindex.app</span>
+    </div>
+  </footer>
+
+  <script>
+    const root      = document.documentElement;
+    const modeBtn   = document.getElementById('mode-btn');
+    const modeLabel = document.getElementById('mode-label');
+    const modeIcon  = document.getElementById('mode-icon');
+    const SUN_PATH  = '<circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>';
+    const MOON_PATH = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+
+    function applyMode(mode) {
+      const isLight = mode === 'light';
+      root.classList.toggle('light', isLight);
+      modeLabel.textContent = isLight ? 'Dark' : 'Light';
+      modeIcon.innerHTML    = isLight ? MOON_PATH : SUN_PATH;
+    }
+
+    const savedMode = localStorage.getItem('di-mode') || 'light';
+    applyMode(savedMode);
+
+    modeBtn.addEventListener('click', () => {
+      const next = root.classList.contains('light') ? 'dark' : 'light';
+      localStorage.setItem('di-mode', next);
+      applyMode(next);
+    });
+
+    twemoji.parse(document.querySelector('nav'), { folder: 'svg', ext: '.svg' });
+    twemoji.parse(document.querySelector('footer'), { folder: 'svg', ext: '.svg' });
+  </script>
+</body>
+</html>
