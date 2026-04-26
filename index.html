@@ -539,7 +539,6 @@
       <img class="nav-logo-icon" src="1f5c2.svg" alt="🗂️">
       <div>
         <div class="nav-logo-name">Design Index</div>
-        <div class="nav-logo-sub">Curated Graphic Design Resources</div>
       </div>
     </a>
     <div class="nav-links">
@@ -560,15 +559,15 @@
 
     <div class="card-container hero">
       <div class="hero-tags">
-        <span class="hero-tag" id="updated-tag">Updated</span>
+        <span class="hero-tag" id="updated-tag"></span>
         <span class="hero-tag" id="count-tag"></span>
-        <span class="hero-tag">Hand-picked for Designers</span>
+        <span class="hero-tag">Curator: @matthewcrtv</span>
       </div>
       <div class="hero-heading">
         <span class="serif">A</span> <span class="bold">Curated</span> <span class="serif" style="white-space:nowrap">Index For</span><br>
         <span class="bold">Growing</span> <span class="serif">Designers.</span>
       </div>
-      <p class="hero-sub"><span class="hero-sub-bold">The internet's best graphic design resources,</span> to sharpen your eye and elevate your work.</p>
+      <p class="hero-sub"><span class="hero-sub-bold">The internet's best graphic design resources,</span> collected so you don't have to.</p>
     </div>
 
     <div class="card-container featured" id="featured">
@@ -585,8 +584,8 @@
         </div>
         <button class="nl-btn" type="submit">I'm In</button>
       </form>
-      <p class="nl-note">Join 2,000+ designers getting the weekly mix. Free. No spam. Unsubscribe anytime.</p>
-      <p class="nl-success" id="nl-success">You're in — check your inbox to confirm.</p>
+      <p class="nl-note" id="nl-note">Join 2,000+ designers getting the weekly mix. Free. No spam. Unsubscribe anytime.</p>
+      <p class="nl-success" id="nl-success">Let's go! You're in. Next issue drops Tuesday.</p>
     </div>
 
     <div id="filter-sentinel" style="height:0;pointer-events:none"></div>
@@ -797,8 +796,8 @@
     // ── Init ─────────────────────────────────────────────────────────────────
     const now = new Date();
     const month = now.toLocaleString('en-US', { month: 'long' }).toUpperCase();
-    document.getElementById('updated-tag').textContent = `Updated ${month} ${now.getFullYear()}`;
-    document.getElementById('count-tag').textContent = `${RESOURCES.length} Resources`;
+    document.getElementById('updated-tag').textContent = `Updated: ${month} ${now.getFullYear()}`;
+    document.getElementById('count-tag').textContent = `Resources: ${RESOURCES.length}`;
 
     renderFeatured();
     observeCards(); // animate featured cards on load
@@ -820,17 +819,25 @@
       btn.textContent = 'Joining…';
       btn.disabled = true;
       try {
-        await fetch('https://subscribe-forms.beehiiv.com/501ae541-8532-43d5-bc7b-9743fd67047d', {
+        const res = await fetch('/api/subscribe', {
           method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: `email=${encodeURIComponent(email)}&first_name=${encodeURIComponent(firstName)}`
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, first_name: firstName }),
         });
-      } catch {}
-      document.getElementById('nl-form').style.display = 'none';
-      document.querySelector('.nl-note').style.display = 'none';
-      document.getElementById('nl-success').style.display = 'block';
+        if (res.ok) {
+          document.getElementById('nl-form').style.display = 'none';
+          document.getElementById('nl-note').style.display = 'none';
+          document.getElementById('nl-success').style.display = 'block';
+        } else {
+          btn.textContent = "I'm In";
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = "I'm In";
+        btn.disabled = false;
+      }
     });
+
   </script>
   <script type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
 

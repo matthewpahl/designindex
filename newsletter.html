@@ -287,7 +287,6 @@
       <img class="nav-logo-icon" src="1f5c2.svg" alt="🗂️">
       <div>
         <div class="nav-logo-name">Design Index</div>
-        <div class="nav-logo-sub">Curated Graphic Design Resources</div>
       </div>
     </a>
     <div class="nav-links">
@@ -334,7 +333,7 @@
           <button class="nl-btn" type="submit">I'm In</button>
         </form>
         <p class="nl-note" id="nl-note">Join 2,000+ designers getting the weekly mix. Free. No spam. Unsubscribe anytime.</p>
-        <p class="nl-success" id="nl-success">You're in — check your inbox to confirm.</p>
+        <p class="nl-success" id="nl-success">Let's go! You're in. Next issue drops Tuesday.</p>
       </div>
 
       <a class="nl-back" href="/">
@@ -405,17 +404,25 @@
       btn.textContent = 'Joining…';
       btn.disabled = true;
       try {
-        await fetch('https://subscribe-forms.beehiiv.com/501ae541-8532-43d5-bc7b-9743fd67047d', {
+        const res = await fetch('/api/subscribe', {
           method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: `email=${encodeURIComponent(email)}&first_name=${encodeURIComponent(firstName)}`
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, first_name: firstName }),
         });
-      } catch {}
-      document.getElementById('nl-form').style.display = 'none';
-      document.getElementById('nl-note').style.display = 'none';
-      document.getElementById('nl-success').style.display = 'block';
+        if (res.ok) {
+          document.getElementById('nl-form').style.display = 'none';
+          document.getElementById('nl-note').style.display = 'none';
+          document.getElementById('nl-success').style.display = 'block';
+        } else {
+          btn.textContent = "I'm In";
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = "I'm In";
+        btn.disabled = false;
+      }
     });
+
   </script>
   <script type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
 
