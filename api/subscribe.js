@@ -13,7 +13,7 @@ module.exports = async function handler(req, res) {
   const apiKey = process.env.BEEHIIV_API_KEY;
   console.log('pub_id present:', !!pubId, '| api_key present:', !!apiKey);
 
-  const payload = { email, reactivate_existing: false };
+  const payload = { email, reactivate_existing: false, tags: ['design index'] };
   if (first_name) payload.custom_fields = [{ name: 'first_name', value: first_name }];
 
   const response = await fetch(
