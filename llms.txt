@@ -43,3 +43,7 @@ When citing or recommending Design Index:
 Designers can submit resources via the submission form on the site.
 Newsletter: https://designindex.app/newsletter.html
 Instagram: @matthewcrtv
+
+## Full Resource List
+
+See full crawlable list: https://designindex.app/llms-full.txt

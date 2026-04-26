@@ -1,0 +1,188 @@
+# Design Index — Full Resource List (118 resources)
+
+> Complete crawlable listing of all curated resources on Design Index. For site overview see https://designindex.app/llms.txt
+
+---
+
+## Inspo
+
+- [Visuelle](https://visuelle.co.uk/?_sft_category=design) — Daily dose of top-notch design projects [Inspo]
+- [Visual Journal](https://visualjournal.it) — Handpicked branding & graphic design finds [Inspo]
+- [Are.na](https://www.are.na) — Collaborative visual bookmarking and moodboarding [Inspo]
+- [Behance](https://www.behance.net/) — Global network to showcase your creative portfolio [Inspo]
+- [Cosmos](https://cosmos.so) — Smart image search with creative context [Inspo]
+- [Pinterest](https://pinterest.com) — Visual inspiration board for any topic [Inspo]
+- [Archives Design](https://archives.design) — Graphic design archive on Internet Archive [Inspo]
+- [Savee It](https://savee.it) — Personal inspiration boards for designers [Inspo]
+- [Design Reviewed](https://designreviewed.com/) — Archive of posters, books, and design ephemera [Inspo]
+
+---
+
+## Stock
+
+- [ArtVee](https://artvee.com/) — Free high-res downloads of public domain art [Stock]
+- [Public.Work](https://public.work/) — Search engine for public domain images [Stock]
+- [Public Domain Archive](https://pdimagearchive.org/infinite-view/) — Open collection of 11,000+ public-domain images [Stock]
+- [Unsplash Experimental](https://unsplash.com/t/experimental) — Handpicked abstract photography collection [Stock]
+- [Pexels](https://www.pexels.com/) — Free high-quality stock photos and videos [Stock]
+
+---
+
+## Type Tools
+
+- [Font Ninja](https://chromewebstore.google.com/detail/fonts-ninja/eljapbgkmlngdpckoiiibecpemleclhh?hl=en-US) — Browser extension to identify any website font [Type Tools]
+- [Font Base](https://fontba.se/) — Free font manager app for Mac, Windows, Linux [Type Tools]
+- [TypeLab](https://matthewcrtv.gumroad.com/l/typelab) — Free curated typefaces for designers [Type Tools]
+
+---
+
+## Type Shops
+
+- [Creative Market](https://creativemarket.com/fonts) — Marketplace for fonts, mockups, and design assets [Type Shops]
+- [Pixel Surplus](https://pixelsurplus.com) — Bundles of fonts, textures, and design kits [Type Shops]
+- [Type Department](https://type-department.com) — Marketplace for high-quality indie fonts [Type Shops]
+
+---
+
+## Type Foundries
+
+- [Blaze Type](https://blazetype.eu/) — Independent foundry with bold contemporary type [Type Foundries]
+- [Brandon Nickerson](https://www.bnicks.com/) — Lettering assets and wordmark templates [Type Foundries]
+- [Emyself Design](https://emyselfdesign.com) — Boutique type foundry with expressive fonts [Type Foundries]
+- [Off-type](https://off-type.com) — Experimental variable & kinetic fonts [Type Foundries]
+- [Sharp Type](https://www.sharptype.co/) — Premium retail fonts for editorial use [Type Foundries]
+- [OhNo Type Co](https://ohnotype.co/) — Fun, legible display and text fonts [Type Foundries]
+- [OTT Foundry](https://ott-foundry.com/) — Korean foundry blending tradition and modern [Type Foundries]
+- [Pangram Pangram](https://pangrampangram.com) — Free-to-try modern fonts for branding [Type Foundries]
+- [Tan Type Co](https://creativemarket.com/tantype) — Elegant, fashion-forward display fonts [Type Foundries]
+- [The Designers Foundry](https://www.thedesignersfoundry.com/) — Limited edition fonts by indie designers [Type Foundries]
+- [Tropical Type](https://tropicaltype.com) — Tropical-inspired display lettering [Type Foundries]
+- [ABC Dinamo](https://abcdinamo.com/) — Variable fonts with playful Swiss design [Type Foundries]
+- [VJ Type](https://www.vj-type.com) — Open-source variable fonts for bold designs [Type Foundries]
+
+---
+
+## Assets
+
+- [Tooooools](https://www.tooooools.app/) — Free lo-fi image filters [Assets]
+- [Effect App](https://effect.app) — Experimental browser image effect tool [Assets]
+- [BlkMarket](https://blkmarket.com/) — Premium textures and 3D elements for posters [Assets]
+- [Bracken.design](https://www.bracken.design/) — Grunge brushes and paper mockup elements [Assets]
+- [Foxrockettstudio](https://foxrockettstudio.com/collections/assets) — Designer asset packs (textures, brushes, etc.) [Assets]
+- [Design Family Market](https://www.designfamilymarket.com/) — Bundles of fonts, textures, and LUTs [Assets]
+- [Design Syndrome](https://designsyndrome.com/) — Poster templates and gradient graphic kits [Assets]
+- [Doron Supply](https://doronsupply.com) — Photo and video overlay assets [Assets]
+- [Samolevsky](https://samolevsky.com) — Glitch textures and retro graphic kits [Assets]
+- [Studio 2AM](https://studio2am.co) — High-res collage elements and poster templates [Assets]
+- [Studio AAA](https://studioaaa.com) — Cinematic mockups and dark Lightroom presets [Assets]
+- [Studio Innate](https://shop.studioinnate.com) — Gradients, grids, and textures for dark designs [Assets]
+- [True Grit Texture Supply](https://truegrittexturesupply.com) — Distressed brushes and craft texture packs [Assets]
+- [YouWorkForThem](https://youworkforthem.com) — Marketplace for fonts, graphics, and motion assets [Assets]
+
+---
+
+## Color
+
+- [Coolors](https://coolors.co/) — AI-powered palette generator [Color]
+- [Color Hunt](https://colorhunt.co/) — Community-curated color palettes [Color]
+- [Adobe Color](https://color.adobe.com) — Color harmonies and palette trends tool [Color]
+- [Pigment Shape Factory](https://pigment.shapefactory.co/) — Generator for gradient and duotone schemes [Color]
+- [Khroma](https://www.khroma.co) — AI-powered color palette generator [Color]
+
+---
+
+## News
+
+- [Brand New](https://www.underconsideration.com/brandnew) — Daily critiques of new logos and identity work [News]
+- [Creative Boom](https://www.creativeboom.com/) — Design news, inspiration, and interviews [News]
+- [It's Nice That](https://www.itsnicethat.com/) — Art and design culture blog [News]
+- [TLDR Design](https://tldr.tech/design) — Weekly design news and inspiration [News]
+- [The Brand Identity](https://the-brandidentity.com/) — Brand identity and print case studies [News]
+
+---
+
+## Books
+
+- [Graphic Design Visionaries](https://www.goodreads.com/book/show/23197685-graphic-design-visionaries) — Profiles of 75 influential graphic designers [Books]
+- [Grid Systems in Graphic Design](https://www.goodreads.com/book/show/60664913-grid-systems-in-graphic-design) — Classic text on grid and layout design [Books]
+- [Herding Tigers](https://www.goodreads.com/book/show/34427197-herding-tigers) — Creative leadership guide for team managers [Books]
+- [Megg's History of Graphic Design](https://www.goodreads.com/book/show/641593.Meggs_History_of_Graphic_Design) — Definitive history of graphic design [Books]
+- [History of Graphic Design Vol. 2](https://www.goodreads.com/book/show/42111600-the-history-of-graphic-design-vol-2-1960-today) — Graphic design history: 1960 to today [Books]
+- [History of Graphic Design Vol. 1](https://www.goodreads.com/book/show/37852859-the-history-of-graphic-design-vol-1-1890-1959) — Graphic design history: 1890–1959 [Books]
+
+---
+
+## Bookstores
+
+- [Counter Print UK](https://www.counter-print.co.uk) — Modern design books, zines, and mags [Bookstores]
+- [Draw-Down Books](https://www.draw-down.com) — Typography and risograph art books [Bookstores]
+- [TASCHEN](https://www.taschen.com) — Coffee-table art and design books [Bookstores]
+- [Unit Editions](https://uniteditions.com/) — Limited-edition books by top designers [Bookstores]
+- [Victionary](https://victionary.com) — Trend-forward art and design books [Bookstores]
+
+---
+
+## Creators
+
+- [Design.Syndrome](https://www.youtube.com/@design.syndrome) — Creative studio tutorials and asset packs [Creators]
+- [Doron Studio](https://www.youtube.com/@DoronStudio) — Photoshop and illustration tutorials [Creators]
+- [Oren Meets World](https://www.youtube.com/@orenmeetsworld) — Freelance design vlogs and advice [Creators]
+- [PiXimperfect](https://www.youtube.com/c/PiXimperfect) — Advanced Photoshop retouching tutorials [Creators]
+- [Louis Moss](https://www.youtube.com/@LouisMoss) — Concise Illustrator tutorials for logo & type [Creators]
+- [The Futur](https://www.youtube.com/@thefutur) — Creative business and branding strategy advice [Creators]
+
+---
+
+## Studios
+
+- [Studio Koto](https://www.instagram.com/studiokoto/) — Brand identity and culture-focused projects [Studios]
+- [And Walsh](https://www.instagram.com/andwalsh/) — Branding campaigns and case studies by &Walsh [Studios]
+- [Studio Feixen](https://www.instagram.com/studiofeixen/) — Swiss studio with playful color and motion [Studios]
+- [The New Company](https://www.instagram.com/thenewcompany/) — NYC studio with minimalist identities [Studios]
+- [This Is Collins](https://www.instagram.com/thisiscollins/) — Culture-driven rebrands and dynamic design [Studios]
+- [Wieden Kennedy](https://www.instagram.com/wiedenkennedy/) — Global ad agency known for iconic campaigns [Studios]
+- [Design Studio](https://www.instagram.com/__designstudio__/) — London studio mixing data, code, and identity [Studios]
+- [Hoodzpah Design](https://www.instagram.com/hoodzpahdesign/) — Sister duo with bold, retro-inspired design [Studios]
+- [Porto Rocha](https://www.instagram.com/porto_rocha/) — Studio redefining sports and street branding [Studios]
+- [Center](https://www.instagram.com/center/) — Experimental hub for variable type and AI [Studios]
+- [Wolff Olins](https://www.instagram.com/wolffolins/) — Global branding consultancy known for innovation [Studios]
+- [Studio Nari](https://www.instagram.com/studionari/) — Madrid studio with editorial and spatial design [Studios]
+- [Studio Dumbar](https://www.instagram.com/studiodumbar/) — Dutch studio known for kinetic typography [Studios]
+- [Vucko](https://www.instagram.com/vucko.co/) — Story-driven motion branding and animations [Studios]
+- [Dia Studio](https://www.instagram.com/dia_studio/) — Data-driven motion identities and experiments [Studios]
+
+---
+
+## Designers
+
+- [God Is A Designer](https://www.instagram.com/godisadesigner/) — Faith-based streetwear merging scripture graphics [Designers]
+- [Friends x Family](https://www.instagram.com/friendsxfamily_/) — Fashion-forward church merch collective [Designers]
+- [Ruido 98](https://www.instagram.com/ruido.98/) — AI art experiments and MidJourney prompts [Designers]
+- [Design With Dan](https://www.instagram.com/designwithdan/) — Sports poster and athlete branding inspiration [Designers]
+- [Japaaron](https://www.instagram.com/japaaron/) — Moody experimental graphic design content [Designers]
+- [Josh Warner](https://www.instagram.com/joshwarner.art/) — 3D visuals for church media [Designers]
+- [Sigvard Nilsson](https://www.instagram.com/sigvardnilsson/) — Minimal layouts with scripture-inspired art [Designers]
+- [RJV Collectives](https://www.instagram.com/rjv_collectives/) — Mixed-media worship design collective [Designers]
+- [Clayton Haight](https://www.instagram.com/claytonjhaight/) — Gradient-heavy worship graphics [Designers]
+- [Kevin Hackett](https://www.instagram.com/kevinhackett.art/) — Album art and stage design for music acts [Designers]
+- [Kevin Hackett (Process)](https://www.instagram.com/kevin.hackett/) — Behind-the-scenes design process [Designers]
+- [Magdiel Lopez](https://www.instagram.com/magdiellop/) — Surreal collages combining faith and color [Designers]
+- [Mnaum Design](https://www.instagram.com/mnaumanndesign/) — Chrome metal typography and 3D art [Designers]
+- [Baugasm](https://www.instagram.com/baugasm/) — Daily gradient poster challenges [Designers]
+- [Syyn Studios](https://www.instagram.com/syynstudios/) — Kinetic typography and collage experiments [Designers]
+- [No Pattern](https://www.instagram.com/nopattern/) — Trend-setting gradient-rich poster designs [Designers]
+- [Jerbosmans](https://www.instagram.com/jerbosmans/) — Layered color studies with bold typography [Designers]
+- [Medg](https://www.instagram.com/_medg/) — Psychedelic black-and-white collage art [Designers]
+- [Vasjen Katro](https://www.instagram.com/vasjenkatro/) — Atmospheric gradient landscapes [Designers]
+- [Andrey Azizov](https://www.instagram.com/andreyazizov/) — Quick Illustrator and Photoshop tips [Designers]
+- [Callum's Creative Club](https://www.instagram.com/callumscreativeclub/) — Adobe app tips, updates, and workflows [Designers]
+- [Type Design Class](https://www.instagram.com/typedesignclass/) — Lessons on drawing and spacing custom letters [Designers]
+- [Morula Type](https://www.instagram.com/morula_type/) — Modular type specimens and font experiments [Designers]
+- [Bmnicks](https://www.instagram.com/bmnicks/) — Behind-the-scenes glyph sketches and releases [Designers]
+- [amtakethat](https://www.instagram.com/amtakethat/) — Custom wordmarks and branding lockups [Designers]
+- [Ridding Ink Design](https://www.instagram.com/a13riddinginkdesign/) — Archive of typographic posters [Designers]
+- [The Brand Identity](https://www.instagram.com/thebrandidentity/) — Global brand identity features [Designers]
+- [The Graphic Addict](https://www.instagram.com/thegraphicaddict/) — Curated modernist posters and zines [Designers]
+- [Digital Archive](https://www.instagram.com/digital_archive/) — Digitized rare design ephemera and posters [Designers]
+- [Bymonotype](https://www.instagram.com/bymonotype/) — Daily type trivia, font facts, foundry news [Designers]
+- [Type 01](https://www.instagram.com/type01_/) — Type releases, interviews, and insights [Designers]
