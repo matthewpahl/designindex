@@ -9,26 +9,30 @@ module.exports = async function handler(req, res) {
   const { email, first_name } = req.body || {};
   if (!email) return res.status(400).json({ error: 'Email required' });
 
+  const pubId = process.env.BEEHIIV_PUBLICATION_ID;
+  const apiKey = process.env.BEEHIIV_API_KEY;
+  console.log('pub_id present:', !!pubId, '| api_key present:', !!apiKey);
+
+  const payload = { email, reactivate_existing: false };
+  if (first_name) payload.first_name = first_name;
+
   const response = await fetch(
-    `https://api.beehiiv.com/v2/publications/${process.env.BEEHIIV_PUBLICATION_ID}/subscriptions`,
+    `https://api.beehiiv.com/v2/publications/${pubId}/subscriptions`,
     {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.BEEHIIV_API_KEY}`,
+        'Authorization': `Bearer ${apiKey}`,
       },
-      body: JSON.stringify({
-        email,
-        first_name: first_name || '',
-        reactivate_existing: false,
-        send_welcome_email: true,
-      }),
+      body: JSON.stringify(payload),
     }
   );
 
+  const data = await response.json().catch(() => ({}));
+  console.log('beehiiv status:', response.status, '| body:', JSON.stringify(data));
+
   if (!response.ok) {
-    const err = await response.json().catch(() => ({}));
-    return res.status(response.status).json({ error: err });
+    return res.status(response.status).json({ error: data });
   }
 
   return res.status(200).json({ success: true });
