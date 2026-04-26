@@ -116,6 +116,7 @@
       .nav-links { width: 100%; gap: 16px; padding-bottom: 4px; order: 3; }
       .nav-links a { font-size: 0.78rem; }
       .nav-mode-btn { font-size: 0.73rem; padding: 4px 10px; margin-left: auto; }
+      .nl-heading { font-size: clamp(2.6rem, 13vw, 3.5rem); }
     }
     .nav-mode-btn {
       font-size: 0.78rem; padding: 5px 13px; border-radius: 9999px;
@@ -176,7 +177,7 @@
     /* ── SUBSCRIBE FORM ─────────────────────────────────────────────────────── */
     .nl-form-wrap {
       margin-top: 36px;
-      padding: 28px 32px;
+      padding: 24px 32px 18px;
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 16px;
@@ -231,7 +232,7 @@
     }
     .nl-btn:hover { opacity: 0.8; transform: translateY(-1px); }
     .nl-btn:disabled { opacity: 0.5; cursor: default; transform: none; }
-    .nl-note { font-size: 0.72rem; color: var(--text-faint); letter-spacing: -0.01em; }
+    .nl-note { font-size: 0.8rem; color: var(--text-faint); letter-spacing: -0.01em; }
     .nl-success { font-size: 0.85rem; color: var(--text-dim); letter-spacing: -0.01em; display: none; }
 
     .nl-back {
@@ -311,10 +312,10 @@
     </div>
     <div class="nl-body">
       <p>
-        The same curiosity and obsession that built this index goes into the newsletter every week.
+        <em>The same curiosity and obsession that built this index</em> goes into the newsletter every week.
       </p>
       <p>
-        <em>The Creative Mix</em> goes out every Tuesday. Design resources I'm actually using. The tools, sites, fonts, and references I keep coming back to.
+        <em>The Creative Mix</em> goes out every Tuesday. <strong>Design resources I'm actually using.</strong> The tools, sites, fonts, and references I keep coming back to.
       </p>
       <p>
         Plus a short leadership section for the designer who wants to grow beyond just the work.
@@ -327,7 +328,7 @@
             <input class="nl-input" id="nl-fname" type="text" placeholder="First name" autocomplete="given-name">
             <input class="nl-input" id="nl-email" type="email" placeholder="Your email" required autocomplete="email">
           </div>
-          <button class="nl-btn" type="submit">I'm In</button>
+          <button class="nl-btn" type="submit">I'm In!</button>
         </form>
         <p class="nl-note" id="nl-note">Join 2,000+ designers getting the weekly mix. Free. No spam. Unsubscribe anytime.</p>
         <p class="nl-success" id="nl-success">Let's go! You're in. Next issue drops Tuesday.</p>
@@ -411,11 +412,11 @@
           document.getElementById('nl-note').style.display = 'none';
           document.getElementById('nl-success').style.display = 'block';
         } else {
-          btn.textContent = "I'm In";
+          btn.textContent = "I'm In!";
           btn.disabled = false;
         }
       } catch {
-        btn.textContent = "I'm In";
+        btn.textContent = "I'm In!";
         btn.disabled = false;
       }
     });

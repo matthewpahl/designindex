@@ -582,7 +582,7 @@
           <input class="nl-input" id="nl-fname" type="text" placeholder="First name" autocomplete="given-name">
           <input class="nl-input" id="nl-email" type="email" placeholder="Your email" required autocomplete="email">
         </div>
-        <button class="nl-btn" type="submit">I'm In</button>
+        <button class="nl-btn" type="submit">I'm In!</button>
       </form>
       <p class="nl-note" id="nl-note">Join 2,000+ designers getting the weekly mix. Free. No spam. Unsubscribe anytime.</p>
       <p class="nl-success" id="nl-success">Let's go! You're in. Next issue drops Tuesday.</p>
@@ -829,11 +829,11 @@
           document.getElementById('nl-note').style.display = 'none';
           document.getElementById('nl-success').style.display = 'block';
         } else {
-          btn.textContent = "I'm In";
+          btn.textContent = "I'm In!";
           btn.disabled = false;
         }
       } catch {
-        btn.textContent = "I'm In";
+        btn.textContent = "I'm In!";
         btn.disabled = false;
       }
     });
