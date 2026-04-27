@@ -49,9 +49,10 @@ const RESOURCES = [
   { id: 'typelab',     name: 'TypeLab',      url: 'https://matthewcrtv.gumroad.com/l/typelab',                                                       category: 'type-tools', desc: 'Free curated typefaces for designers',                  tags: ['free', 'fonts'],       image: null, featured: false },
 
   // ── TYPE MARKETPLACE ──────────────────────────────────────────────────────
-  { id: 'creative-market', name: 'Creative Market',  url: 'https://creativemarket.com/fonts',  category: 'type-marketplace', desc: 'Marketplace for fonts, mockups, and design assets',     tags: ['fonts', 'marketplace'],  image: null, featured: false },
-  { id: 'pixel-surplus',   name: 'Pixel Surplus',    url: 'https://pixelsurplus.com',          category: 'type-marketplace', desc: 'Bundles of fonts, textures, and design kits',           tags: ['bundles', 'fonts'],       image: null, featured: false },
-  { id: 'type-department', name: 'Type Department',  url: 'https://type-department.com',       category: 'type-marketplace', desc: 'Marketplace for high-quality indie fonts',               tags: ['indie', 'marketplace'],  image: null, featured: false },
+  { id: 'creative-market',    name: 'Creative Market',       url: 'https://creativemarket.com/fonts',                    category: 'type-marketplace', desc: 'Marketplace for fonts, mockups, and design assets',       tags: ['fonts', 'marketplace'],  image: null, featured: false },
+  { id: 'pixel-surplus',      name: 'Pixel Surplus',         url: 'https://pixelsurplus.com',                            category: 'type-marketplace', desc: 'Bundles of fonts, textures, and design kits',             tags: ['bundles', 'fonts'],       image: null, featured: false },
+  { id: 'type-department',    name: 'Type Department',       url: 'https://type-department.com',                         category: 'type-marketplace', desc: 'Marketplace for high-quality indie fonts',                 tags: ['indie', 'marketplace'],  image: null, featured: false },
+  { id: 'youworkforthem-type',name: 'YouWorkForThem Fonts',  url: 'https://www.youworkforthem.com/fonts/bestselling',    category: 'type-marketplace', desc: 'My favorite type marketplace if you\'re on a budget',     tags: ['fonts', 'marketplace'],  image: null, featured: false, added: '2026-04-27' },
 
   // ── TYPE FOUNDRY ──────────────────────────────────────────────────────────
   { id: 'blaze-type',         name: 'Blaze Type',             url: 'https://blazetype.eu/',                    category: 'type-foundry', desc: 'Independent foundry with bold contemporary type',            tags: ['display', 'foundry'],       image: null, featured: false },
