@@ -9,17 +9,18 @@
 
 const CATEGORIES = [
   { id: 'design-inspo',     label: 'Inspo',             badge: 'INSPO', emoji: '⚡' },
-  { id: 'type-tools',       label: 'Type Tools',        badge: 'TYPE',  emoji: '🛠️' },
-  { id: 'type-marketplace', label: 'Type Shops',        badge: 'MKT',   emoji: '🌐' },
-  { id: 'type-foundry',     label: 'Type Foundries',    badge: 'FNDR',  emoji: '🔤' },
+  { id: 'type-tools',       label: 'Type Tools',        badge: 'TYPE',  emoji: '🔡' },
+  { id: 'type-marketplace', label: 'Type Shops',        badge: 'MKT',   emoji: '🔡' },
+  { id: 'type-foundry',     label: 'Type Foundries',    badge: 'FNDR',  emoji: '🔡' },
   { id: 'assets',           label: 'Assets',            badge: 'KIT',   emoji: '🧰' },
+  { id: 'tools',            label: 'Tools',             badge: 'TOOL',  emoji: '🛠️' },
   { id: 'color',            label: 'Color',             badge: 'HUE',   emoji: '🖍️' },
   { id: 'stock',            label: 'Stock',             badge: 'IMG',   emoji: '🖼️' },
   { id: 'design-news',      label: 'News',              badge: 'EDIT',  emoji: '🧠' },
   { id: 'books-titles',     label: 'Books',             badge: 'READ',  emoji: '📚' },
   { id: 'bookstores',       label: 'Bookstores',        badge: 'SHOP',  emoji: '🛒' },
   { id: 'creators',         label: 'Creators',          badge: 'WATCH', emoji: '🎥' },
-  { id: 'agency-studio',    label: 'Studios',           badge: 'AGCY',  emoji: '🏢' },
+  { id: 'agency-studio',    label: 'Studios',           badge: 'AGCY',  emoji: '🖥️' },
   { id: 'designers',        label: 'Designers',         badge: 'DSGN',  emoji: '🎨' },
 ];
 
@@ -100,8 +101,8 @@ const RESOURCES = [
   { id: 'victionary',    name: 'Victionary',        url: 'https://victionary.com',            category: 'bookstores', desc: 'Trend forward curation. Beautiful product pages. Worth scanning the catalog.',                 tags: ['art books', 'asia'],       image: null, featured: false, added: '2026-04-27' },
 
   // ── ASSETS / RESOURCES ────────────────────────────────────────────────────
-  { id: 'tooooools',           name: 'Tooooools',            url: 'https://www.tooooools.app/',                        category: 'assets', desc: 'Free web app with 14+ photo effects (CRT, ASCII, dither, etc.). Super easy & fast.',                          tags: ['free', 'effects'],        image: null, featured: false },
-  { id: 'effect-app',          name: 'Effect App',           url: 'https://effect.app',                                category: 'assets', desc: 'Free web app for experimental image effects. 85+ options - Tooooools on steroids.',            tags: ['effects', 'tools'],       image: null, featured: false, added: '2026-04-27' },
+  { id: 'tooooools',           name: 'Tooooools',            url: 'https://www.tooooools.app/',                        category: 'tools', desc: 'Free web app with 14+ photo effects (CRT, ASCII, dither, etc.). Super easy & fast.',                          tags: ['free', 'effects'],        image: null, featured: false },
+  { id: 'effect-app',          name: 'Effect App',           url: 'https://effect.app',                                category: 'tools', desc: 'Free web app for experimental image effects. 85+ options - Tooooools on steroids.',            tags: ['effects', 'tools'],       image: null, featured: false, added: '2026-04-27' },
   { id: 'blkmarket',           name: 'BlkMarket',            url: 'https://blkmarket.com/',                            category: 'assets', desc: 'They went MIA, but the assets are still top quality. Avoid the plugins - grab the packs.',      tags: ['textures', '3d'],         image: null, featured: false },
   { id: 'bracken-design',      name: 'Bracken.design',       url: 'https://www.bracken.design/',                       category: 'assets', desc: 'Texture nerd meets design assets. No AI, all handmade.',          tags: ['grunge', 'brushes'],      image: null, featured: false },
   { id: 'foxrockettstudio',    name: 'Foxrockettstudio',     url: 'https://foxrockettstudio.com/collections/assets',  category: 'assets', desc: 'The spot for micrographics & vector elements.',    tags: ['assets', 'kits'],         image: null, featured: false },
@@ -114,6 +115,10 @@ const RESOURCES = [
   { id: 'studio-innate',       name: 'Studio Innate',        url: 'https://shop.studioinnate.com',                     category: 'assets', desc: 'Vector packs are second to none. Wild display font catalog too.',   tags: ['gradients', 'textures'],  image: null, featured: false },
   { id: 'true-grit',           name: 'True Grit Texture Supply', url: 'https://truegrittexturesupply.com',             category: 'assets', desc: 'My #1 texture pack lives here (Infinite Pulp). Filter by aesthetic - fire.',        tags: ['textures', 'brushes'],    image: null, featured: false },
   { id: 'youworkforthem',      name: 'YouWorkForThem',       url: 'https://youworkforthem.com',                        category: 'assets', desc: '#1 asset site if you\'re ballin on a budget & need a wide range of quality, curated options.', tags: ['fonts', 'premium'],       image: null, featured: false },
+
+  // ── TOOLS ─────────────────────────────────────────────────────────────────
+  { id: 'dithertone',  name: 'Dithertone',  url: 'https://www.doronsupply.com/product/dithertone-pro',                  category: 'tools', desc: 'PS plugin with 40+ bitmap dithering algorithms & real time rendering. Insane.',         tags: ['photoshop', 'plugin'], image: null, featured: false, added: '2026-04-28' },
+  { id: 'distressor',  name: 'Distressor',  url: 'https://texturelabs.org/tools/distressor-plugin-for-photoshop/',      category: 'tools', desc: 'PS plugin with 14 distress styles. Realistic & infinite options. I use it every day.',   tags: ['photoshop', 'plugin'], image: null, featured: false, added: '2026-04-28' },
 
   // ── COLOR ─────────────────────────────────────────────────────────────────
   { id: 'coolors',               name: 'Coolors',               url: 'https://coolors.co/',                   category: 'color', desc: 'Fast palette generator. Simple & beautiful. Pro version unlocks a lot at $3/mo.',                  tags: ['palette', 'generator'], image: null, featured: false },

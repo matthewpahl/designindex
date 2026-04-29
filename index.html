@@ -98,7 +98,7 @@
     "name": "Curated Graphic Design Resources",
     "description": "A hand-curated directory of the internet's best graphic design resources across type foundries, inspiration, stock, color tools, books, assets, and more.",
     "url": "https://designindex.app",
-    "numberOfItems": 118,
+    "numberOfItems": 121,
     "itemListOrder": "https://schema.org/ItemListUnordered",
     "itemListElement": [
       {
@@ -549,8 +549,9 @@
     /* ── CATEGORY SECTIONS ────────────────────────────────────────────────── */
     .cat-section { margin-bottom: 56px; padding: 0 20px; }
     [data-category="designers"] { display: none; }
+    .fpill[data-filter="designers"] { display: none; }
     [data-category="agency-studio"] .rcard-desc { display: none; }
-.cat-heading {
+    .cat-heading {
       font-size: 1.75rem; font-weight: 700; letter-spacing: -0.03em; color: var(--text);
       display: flex; align-items: center; gap: 10px;
       margin-bottom: 20px; margin-top: 8px;
@@ -825,8 +826,6 @@
         : CATEGORIES.filter(c => c.id === filter);
       const container = document.getElementById('cat-container');
       container.innerHTML = cats.map(cat => {
-        const globalIdx = CATEGORIES.indexOf(cat) + 1;
-        const num = String(globalIdx).padStart(2, '0');
         const resources = shuffle(RESOURCES.filter(r => r.category === cat.id));
         const countStr = `<span class="cat-count">${resources.length}</span>`;
         return `<div class="cat-section" data-category="${cat.id}">
@@ -837,7 +836,6 @@
       container.querySelectorAll('.cat-heading').forEach(h =>
         h.addEventListener('click', () => setFilter(h.dataset.filter))
       );
-      parseEmoji(container);
       observeCards();
     }
 
@@ -856,7 +854,6 @@
         return `<span class="fpill" data-filter="${c.id}">${c.emoji} ${c.label}</span>`;
       }).join('');
       wrap.innerHTML = allPill + catPills;
-      parseEmoji(wrap);
       wrap.querySelectorAll('.fpill').forEach(p =>
         p.addEventListener('click', () => setFilter(p.dataset.filter))
       );
@@ -864,8 +861,9 @@
 
     // ── Filter with URL hash state ───────────────────────────────────────────
     function setFilter(filter) {
+      const activeFilter = TYPE_IDS.includes(filter) ? 'type' : filter;
       document.querySelectorAll('.fpill').forEach(p =>
-        p.classList.toggle('active', p.dataset.filter === filter)
+        p.classList.toggle('active', p.dataset.filter === activeFilter)
       );
       renderCategories(filter);
       history.replaceState(null, '', filter === 'all' ? location.pathname : '#' + filter);
@@ -908,7 +906,7 @@
       e.preventDefault();
       const email = document.getElementById('nl-email').value.trim();
       const firstName = document.getElementById('nl-fname').value.trim();
-      if (!email) return;
+      if (!email || !/\S+@\S+\.\S+/.test(email)) return;
       const btn = e.target.querySelector('button');
       btn.textContent = 'Joining…';
       btn.disabled = true;
