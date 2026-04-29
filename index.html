@@ -548,6 +548,8 @@
 
     /* ── CATEGORY SECTIONS ────────────────────────────────────────────────── */
     .cat-section { margin-bottom: 56px; padding: 0 20px; }
+    [data-category="designers"] { display: none; }
+    [data-category="agency-studio"] .rcard-desc { display: none; }
 .cat-heading {
       font-size: 1.75rem; font-weight: 700; letter-spacing: -0.03em; color: var(--text);
       display: flex; align-items: center; gap: 10px;
@@ -827,7 +829,7 @@
         const num = String(globalIdx).padStart(2, '0');
         const resources = shuffle(RESOURCES.filter(r => r.category === cat.id));
         const countStr = `<span class="cat-count">${resources.length}</span>`;
-        return `<div class="cat-section">
+        return `<div class="cat-section" data-category="${cat.id}">
           <h2 class="cat-heading" data-filter="${cat.id}">${cat.label}${countStr}</h2>
           <div class="cat-grid">${resources.map(r => cardHTML(r)).join('')}</div>
         </div>`;
