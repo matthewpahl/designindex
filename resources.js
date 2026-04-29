@@ -117,6 +117,7 @@ const RESOURCES = [
   { id: 'youworkforthem',      name: 'YouWorkForThem',       url: 'https://youworkforthem.com',                        category: 'assets', desc: '#1 asset site if you\'re ballin on a budget & need a wide range of quality, curated options.', tags: ['fonts', 'premium'],       image: null, featured: false },
 
   // ── TOOLS ─────────────────────────────────────────────────────────────────
+  { id: 'bitmap-app',  name: 'Bitmap App',  url: 'https://bitmap.designfamilymarket.com/#/color',         category: 'tools', desc: 'Simple & fast web app converts images to bitmaps in color or b&w. Exports SVG, JPG, PNG.', tags: ['bitmap', 'web app'],   image: null, featured: false, added: '2026-04-28' },
   { id: 'dithertone',  name: 'Dithertone',  url: 'https://www.doronsupply.com/product/dithertone-pro',                  category: 'tools', desc: 'PS plugin with 40+ bitmap dithering algorithms & real time rendering. Insane.',         tags: ['photoshop', 'plugin'], image: null, featured: false, added: '2026-04-28' },
   { id: 'distressor',  name: 'Distressor',  url: 'https://texturelabs.org/tools/distressor-plugin-for-photoshop/',      category: 'tools', desc: 'PS plugin with 14 distress styles. Realistic & infinite options. I use it every day.',   tags: ['photoshop', 'plugin'], image: null, featured: false, added: '2026-04-28' },
 
