@@ -857,7 +857,9 @@
       wrap.querySelectorAll('.fpill').forEach(p =>
         p.addEventListener('click', () => {
           setFilter(p.dataset.filter);
-          document.getElementById('categories').scrollIntoView({ behavior: 'smooth', block: 'start' });
+          const sentinel = document.getElementById('filter-sentinel');
+          const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 58;
+          window.scrollTo({ top: Math.max(0, sentinel.getBoundingClientRect().top + window.scrollY - navH - 24), behavior: 'smooth' });
         })
       );
     }
