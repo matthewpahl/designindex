@@ -855,7 +855,10 @@
       }).join('');
       wrap.innerHTML = allPill + catPills;
       wrap.querySelectorAll('.fpill').forEach(p =>
-        p.addEventListener('click', () => setFilter(p.dataset.filter))
+        p.addEventListener('click', () => {
+          setFilter(p.dataset.filter);
+          document.getElementById('categories').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        })
       );
     }
 
