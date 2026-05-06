@@ -18,18 +18,19 @@ alwaysApply: true
 
 ## Icons and emoji
 
-- Never use raw Unicode arrow characters (e.g. `↗`) inside card templates — Twemoji will intercept and render them as emoji images. Use inline SVG for arrows and icons
+- Use inline SVG for arrow icons and UI controls — not Unicode arrow characters. Native emoji is fine for decorative use (category headings, logos) but arrows and directional icons need SVG for precise sizing and color control
 - The visit arrow on cards is an SVG inside `.visit-arrow`, styled as a frosted-glass circle (no box-shadow)
+- Nav logo and footer logo use the `🗂️` Unicode emoji in a `<span>` — native browser rendering, no external library
 
 ## Images
 
 - All card thumbnails use 16:9 aspect ratio
-- When no image file exists for a card, the `onerror` handler adds a flat charcoal `#1e1f28` background class — never a broken image icon
-- `.thumb-orange` and `.thumb-blue` are both flat `#1e1f28` charcoal — not gradients. They are named placeholders; real thumbnails replace them entirely
+- When no image file exists for a card, the `onerror` handler adds a flat charcoal `#1e2023` background — never a broken image icon
+- `.thumb-orange` and `.thumb-blue` fallback classes are flat charcoal placeholders; real thumbnails replace them entirely
 
 ## Interaction
 
-- Cards have a **resting box-shadow** at all times (not just on hover) — this lifts them off the surface and separates the info area from the background
+- Cards have a **resting box-shadow** at all times (not just on hover) — this lifts them off the surface
 - Card hover: `translateY(-3px)` + deeper box-shadow + brighter border — no other transform effects
 - Filter pills are generated from the `CATEGORIES` array in `resources.js` — never hardcoded in HTML
 - Category headings are clickable and filter to that category

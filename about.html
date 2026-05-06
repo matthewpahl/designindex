@@ -293,13 +293,13 @@
     /* ── ABOUT ──────────────────────────────────────────────────────────────── */
     .about-wrap {
       max-width: 680px;
-      margin: 60px auto 80px;
+      margin: 60px auto 64px;
       padding: 0 28px;
     }
 
     @media (max-width: 720px) {
       .about-wrap {
-        margin: 40px auto 60px;
+        margin: 40px auto 48px;
       }
     }
 
@@ -493,6 +493,212 @@
       color: var(--text-faint);
       letter-spacing: 0.02em;
     }
+
+    /* ── TESTIMONIALS ───────────────────────────────────────────────────── */
+    .testi-section {
+      padding: 64px 16px 80px;
+      overflow: hidden;
+    }
+
+    .testi-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .testi-eyebrow {
+      text-align: center;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .testi-eyebrow::before,
+    .testi-eyebrow::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 28px;
+      background: currentColor;
+      opacity: 0.4;
+    }
+
+    .testi-columns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      max-height: 580px;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
+      mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
+    }
+
+    .testi-col {
+      flex: 1;
+      min-width: 0;
+      max-width: 360px;
+    }
+
+    .testi-col-2,
+    .testi-col-3 {
+      display: none;
+    }
+
+    @media (min-width: 640px) {
+      .testi-col-2 { display: block; }
+    }
+
+    @media (min-width: 960px) {
+      .testi-col-3 { display: block; }
+    }
+
+    @keyframes testi-scroll {
+      from { transform: translateY(0); }
+      to   { transform: translateY(-50%); }
+    }
+
+    .testi-track {
+      display: flex;
+      flex-direction: column;
+      animation: testi-scroll linear infinite;
+      animation-duration: var(--dur, 28s);
+    }
+
+    .testi-track:hover,
+    .testi-track:focus-within {
+      animation-play-state: paused;
+    }
+
+    .testi-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px 20px 16px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.06);
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+
+    html.light .testi-card {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.04);
+    }
+
+    .testi-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22), 0 2px 6px rgba(0, 0, 0, 0.08);
+      border-color: var(--border-hover);
+    }
+
+    html.light .testi-card:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09), 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .testi-quote {
+      font-size: 0.855rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+      letter-spacing: -0.01em;
+      margin: 0 0 13px;
+    }
+
+    .testi-footer {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .testi-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.57rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .testi-name {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    /* ── CONTRIBUTORS ───────────────────────────────────────────────────── */
+    .contribs-section {
+      padding: 0 16px;
+    }
+
+    .contribs-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .section-badge-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .section-badge {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      border: 1px solid var(--border-hover);
+      color: var(--text-dim);
+    }
+
+    .contribs-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.06);
+    }
+
+    html.light .contribs-card {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.04);
+    }
+
+    .contribs-names {
+      font-size: 0.855rem;
+      color: var(--text-dim);
+      line-height: 1.7;
+      letter-spacing: -0.01em;
+      margin: 0;
+    }
+
+    .page-blur-bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 140px;
+      pointer-events: none;
+      z-index: 25;
+      background: linear-gradient(to bottom, transparent, var(--bg) 80%);
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+      -webkit-mask-image: linear-gradient(to top, black 50%, transparent);
+      mask-image: linear-gradient(to top, black 50%, transparent);
+    }
   </style>
 </head>
 
@@ -578,16 +784,195 @@
         <a href="https://www.linkedin.com/in/matthewpahl/" target="_blank" rel="noopener"
           class="social-link">LinkedIn</a>
       </div>
-      <a class="about-back" href="/">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"
-          stroke-linecap="round" stroke-linejoin="round">
-          <line x1="10" y1="6" x2="2" y2="6" />
-          <polyline points="5,3 2,6 5,9" />
-        </svg>
-        Back to the index
-      </a>
     </div>
   </div>
+
+  <div class="contribs-section">
+    <div class="contribs-inner">
+      <div class="section-badge-wrap">
+        <span class="section-badge">These designers have given their time to make this better.</span>
+      </div>
+      <div class="contribs-card">
+        <p class="contribs-names">Camilo Espinel, Lea Johnson, Broc Anthony, Timé Chanda, Sam Smyth, Dustin Harper, Josh Lowder, Austin Orasi, Chase Glisson, Reuben Rohard, Skyler Stigmon, Michelle Vanderford, Jake Hill, Judson Abeler, Ben Himaya, Jake Kohler, Steven Estes, Chandler Saunders, Anthony Roberts, Jeremy Lofay, Simon Shakespeare, John Wood, Jakob Haymond, Ryan Nearhood, Jonah Strong, Lohan Chenu, Rayner W.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="testi-section" aria-label="What designers are saying">
+    <div class="testi-inner">
+      <div class="section-badge-wrap">
+        <span class="section-badge">What designers are saying</span>
+      </div>
+      <div class="testi-columns">
+
+        <!-- Column 1 — 28s -->
+        <div class="testi-col testi-col-1">
+          <div class="testi-track" style="--dur:28s">
+            <div class="testi-card">
+              <p class="testi-quote">So this is amazing. Ive bookmarked so many things over the years or put them into notes/reminders and never could go back and find the things i needed. This is super helpful. I know i would use this a lot and in fact i already went and checked out a few of these resources i had not seen before.</p>
+              <div class="testi-footer"><div class="testi-avatar">AR</div><span class="testi-name">Anthony Roberts</span></div>
+            </div>
+            <div class="testi-card">
+              <p class="testi-quote">All in all really love what you've built. The curation feels intentional, every link makes sense to the page, and the category bubbles are super helpful.</p>
+              <div class="testi-footer"><div class="testi-avatar">DH</div><span class="testi-name">Dustin Harper</span></div>
+            </div>
+            <div class="testi-card">
+              <p class="testi-quote">Wow this is dope. Such a cool site tbh I love the database feel of it and filtering!</p>
+              <div class="testi-footer"><div class="testi-avatar">JH</div><span class="testi-name">Jake Hill</span></div>
+            </div>
+            <div class="testi-card">
+              <p class="testi-quote">Just spent some time with it... overall I think it's a really strong collection of tool cards and everything feels super accessible.</p>
+              <div class="testi-footer"><div class="testi-avatar">JS</div><span class="testi-name">Jonah Strong</span></div>
+            </div>
+            <div class="testi-card">
+              <p class="testi-quote">Overall this is exactly what would have been useful for me just getting into design instead of the years it took to find and bookmark most of these resources.</p>
+              <div class="testi-footer"><div class="testi-avatar">RN</div><span class="testi-name">Ryan Nearhood</span></div>
+            </div>
+            <div class="testi-card">
+              <p class="testi-quote">It all feels pristine.</p>
+              <div class="testi-footer"><div class="testi-avatar">SS</div><span class="testi-name">Sam Smyth</span></div>
+            </div>
+            <!-- Duplicate set for seamless loop -->
+            <div class="testi-card" aria-hidden="true">
+              <p class="testi-quote">So this is amazing. Ive bookmarked so many things over the years or put them into notes/reminders and never could go back and find the things i needed. This is super helpful. I know i would use this a lot and in fact i already went and checked out a few of these resources i had not seen before.</p>
+              <div class="testi-footer"><div class="testi-avatar">AR</div><span class="testi-name">Anthony Roberts</span></div>
+            </div>
+            <div class="testi-card" aria-hidden="true">
+              <p class="testi-quote">All in all really love what you've built. The curation feels intentional, every link makes sense to the page, and the category bubbles are super helpful.</p>
+              <div class="testi-footer"><div class="testi-avatar">DH</div><span class="testi-name">Dustin Harper</span></div>
+            </div>
+            <div class="testi-card" aria-hidden="true">
+              <p class="testi-quote">Wow this is dope. Such a cool site tbh I love the database feel of it and filtering!</p>
+              <div class="testi-footer"><div class="testi-avatar">JH</div><span class="testi-name">Jake Hill</span></div>
+            </div>
+            <div class="testi-card" aria-hidden="true">
+              <p class="testi-quote">Just spent some time with it... overall I think it's a really strong collection of tool cards and everything feels super accessible.</p>
+              <div class="testi-footer"><div class="testi-avatar">JS</div><span class="testi-name">Jonah Strong</span></div>
+            </div>
+            <div class="testi-card" aria-hidden="true">
+              <p class="testi-quote">Overall this is exactly what would have been useful for me just getting into design instead of the years it took to find and bookmark most of these resources.</p>
+              <div class="testi-footer"><div class="testi-avatar">RN</div><span class="testi-name">Ryan Nearhood</span></div>
+            </div>
+            <div class="testi-card" aria-hidden="true">
+              <p class="testi-quote">It all feels pristine.</p>
+              <div class="testi-footer"><div class="testi-avatar">SS</div><span class="testi-name">Sam Smyth</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2 — 36s -->
+        <div class="testi-col testi-col-2">
+          <div class="testi-track" style="--dur:36s">
+            <div class="testi-card">
+              <p class="testi-quote">It's super super dope. I think it's a really awesome resource that will live and breathe for future designers or for growing design designers.</p>
+              <div class="testi-footer"><div class="testi-avatar">AO</div><span class="testi-name">Austin Orasi</span></div>
+            </div>
+            <div class="testi-card">
+              <p class="testi-quote">I definitely think for designers who are newer this will be absolutely massive, cause a lot of these places I know I didn't know of when I first started. Over all I love the idea, it's kinda like having a lot of my asset tabs I have pinned on one website. Like I could close some tabs and use this as a base to get to some of those site quicker.</p>
+              <div class="testi-footer"><div class="testi-avatar">CG</div><span class="testi-name">Chase Glisson</span></div>
+            </div>
+            <div class="testi-card">
+              <p class="testi-quote">This is a really cool Idea! I have a whole section in my Pinterest dedicated to this sort of thing but it's really cool that this is a crowdsourced version where people can submit and add new resources. game changer for me. That's so many good sources in one place! I could see people actually growing their platform through this website.</p>
+              <div class="testi-footer"><div class="testi-avatar">JW</div><span class="testi-name">John Wood</span></div>
+            </div>
+            <div class="testi-card">
+              <p class="testi-quote">Dude this is awesome! I will definitely use it! I think this will help designers tremendously in becoming better. And I think you hit all the areas!</p>
+              <div class="testi-footer"><div class="testi-avatar">JL</div><span class="testi-name">Josh Lowder</span></div>
+            </div>
+            <div class="testi-card">
+              <p class="testi-quote">okurr this is actually an insane amount of resources, all the different sections are fireee and might be my favorite.</p>
+              <div class="testi-footer"><div class="testi-avatar">LJ</div><span class="testi-name">Lea Johnson</span></div>
+            </div>
+            <div class="testi-card">
+              <p class="testi-quote">It's such an amazing resource to have! It's borderline perfect. I really love the option to submit to the index.</p>
+              <div class="testi-footer"><div class="testi-avatar">TC</div><span class="testi-name">Timé Chanda</span></div>
+            </div>
+            <!-- Duplicate set for seamless loop -->
+            <div class="testi-card" aria-hidden="true">
+              <p class="testi-quote">It's super super dope. I think it's a really awesome resource that will live and breathe for future designers or for growing design designers.</p>
+              <div class="testi-footer"><div class="testi-avatar">AO</div><span class="testi-name">Austin Orasi</span></div>
+            </div>
+            <div class="testi-card" aria-hidden="true">
+              <p class="testi-quote">I definitely think for designers who are newer this will be absolutely massive, cause a lot of these places I know I didn't know of when I first started. Over all I love the idea, it's kinda like having a lot of my asset tabs I have pinned on one website. Like I could close some tabs and use this as a base to get to some of those site quicker.</p>
+              <div class="testi-footer"><div class="testi-avatar">CG</div><span class="testi-name">Chase Glisson</span></div>
+            </div>
+            <div class="testi-card" aria-hidden="true">
+              <p class="testi-quote">This is a really cool Idea! I have a whole section in my Pinterest dedicated to this sort of thing but it's really cool that this is a crowdsourced version where people can submit and add new resources. game changer for me. That's so many good sources in one place! I could see people actually growing their platform through this website.</p>
+              <div class="testi-footer"><div class="testi-avatar">JW</div><span class="testi-name">John Wood</span></div>
+            </div>
+            <div class="testi-card" aria-hidden="true">
+              <p class="testi-quote">Dude this is awesome! I will definitely use it! I think this will help designers tremendously in becoming better. And I think you hit all the areas!</p>
+              <div class="testi-footer"><div class="testi-avatar">JL</div><span class="testi-name">Josh Lowder</span></div>
+            </div>
+            <div class="testi-card" aria-hidden="true">
+              <p class="testi-quote">okurr this is actually an insane amount of resources, all the different sections are fireee and might be my favorite.</p>
+              <div class="testi-footer"><div class="testi-avatar">LJ</div><span class="testi-name">Lea Johnson</span></div>
+            </div>
+            <div class="testi-card" aria-hidden="true">
+              <p class="testi-quote">It's such an amazing resource to have! It's borderline perfect. I really love the option to submit to the index.</p>
+              <div class="testi-footer"><div class="testi-avatar">TC</div><span class="testi-name">Timé Chanda</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3 — 32s -->
+        <div class="testi-col testi-col-3">
+          <div class="testi-track" style="--dur:32s">
+            <div class="testi-card">
+              <p class="testi-quote">This is truly amazing and I'd actually use it instead of having all these bookmarked... it's a one stop shop. Overall I think this is so cool and I wish I had it during my younger days in school!</p>
+              <div class="testi-footer"><div class="testi-avatar">BA</div><span class="testi-name">Broc Anthony</span></div>
+            </div>
+            <div class="testi-card">
+              <p class="testi-quote">this tool already benefits the emerging wave of graphic designers and artists. For the next 15 years or so. No more outdated advice please !!!! Love this tool.</p>
+              <div class="testi-footer"><div class="testi-avatar">CE</div><span class="testi-name">Camilo Espinel</span></div>
+            </div>
+            <div class="testi-card">
+              <p class="testi-quote">Literally such a great tool, I'm always trying to look back at screenshots and saves haha. Great job, this is so sick.</p>
+              <div class="testi-footer"><div class="testi-avatar">JH</div><span class="testi-name">Jakob Haymond</span></div>
+            </div>
+            <div class="testi-card">
+              <p class="testi-quote">I'll be sharing this with every single designer I know... it's for real like a cheat code. Overall great vibe, super clear and I know this is going to be a massive resource.</p>
+              <div class="testi-footer"><div class="testi-avatar">JA</div><span class="testi-name">Judson Abeler</span></div>
+            </div>
+            <div class="testi-card">
+              <p class="testi-quote">Kinda like a playground for me, very inspiring and very satisfying. Everything is included. I feel like going to the store and found almost everything I needed. Man! Keep going.</p>
+              <div class="testi-footer"><div class="testi-avatar">RW</div><span class="testi-name">Rayner W.</span></div>
+            </div>
+            <div class="testi-card">
+              <p class="testi-quote">Considering I went through this a few times to gather inspiration, I think it's a big ol win 😂 So yeah, I rock with it and will be bookmarking it.</p>
+              <div class="testi-footer"><div class="testi-avatar">SK</div><span class="testi-name">Skyler Stigmon</span></div>
+            </div>
+            <!-- Duplicate set for seamless loop -->
+            <div class="testi-card" aria-hidden="true">
+              <p class="testi-quote">This is truly amazing and I'd actually use it instead of having all these bookmarked... it's a one stop shop. Overall I think this is so cool and I wish I had it during my younger days in school!</p>
+              <div class="testi-footer"><div class="testi-avatar">BA</div><span class="testi-name">Broc Anthony</span></div>
+            </div>
+            <div class="testi-card" aria-hidden="true">
+              <p class="testi-quote">this tool already benefits the emerging wave of graphic designers and artists. For the next 15 years or so. No more outdated advice please !!!! Love this tool.</p>
+              <div class="testi-footer"><div class="testi-avatar">CE</div><span class="testi-name">Camilo Espinel</span></div>
+            </div>
+            <div class="testi-card" aria-hidden="true">
+              <p class="testi-quote">Literally such a great tool, I'm always trying to look back at screenshots and saves haha. Great job, this is so sick.</p>
+              <div class="testi-footer"><div class="testi-avatar">JH</div><span class="testi-name">Jakob Haymond</span></div>
+            </div>
+            <div class="testi-card" aria-hidden="true">
+              <p class="testi-quote">I'll be sharing this with every single designer I know... it's for real like a cheat code. Overall great vibe, super clear and I know this is going to be a massive resource.</p>
+              <div class="testi-footer"><div class="testi-avatar">JA</div><span class="testi-name">Judson Abeler</span></div>
+            </div>
+            <div class="testi-card" aria-hidden="true">
+              <p class="testi-quote">Kinda like a playground for me, very inspiring and very satisfying. Everything is included. I feel like going to the store and found almost everything I needed. Man! Keep going.</p>
+              <div class="testi-footer"><div class="testi-avatar">RW</div><span class="testi-name">Rayner W.</span></div>
+            </div>
+            <div class="testi-card" aria-hidden="true">
+              <p class="testi-quote">Considering I went through this a few times to gather inspiration, I think it's a big ol win 😂 So yeah, I rock with it and will be bookmarking it.</p>
+              <div class="testi-footer"><div class="testi-avatar">SK</div><span class="testi-name">Skyler Stigmon</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <footer>
     <div class="footer-inner">
@@ -630,6 +1015,8 @@
     });
 
   </script>
+
+  <div class="page-blur-bottom" aria-hidden="true"></div>
 </body>
 
 </html>
